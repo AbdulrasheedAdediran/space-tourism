@@ -1,0 +1,69 @@
+nav {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem 3rem;
+  border-bottom: 1px solid grey;
+}
+
+nav .logo-and-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+
+nav .logo-and-brand img {
+  cursor: pointer;
+}
+
+nav .logo-and-brand p {
+  font-size: 1rem;
+  color: #17395c;
+  font-weight: 600;
+}
+
+nav .user-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+
+nav .user-profile img {
+  cursor: pointer;
+}
+
+nav .user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #8a9ddb;
+  margin-left: 1rem;
+  border: 2px solid #ddd;
+}
+
+nav .user-avatar img {
+  width: 100%;
+}
+/*# sourceMappingURL=NavBar.css.map */

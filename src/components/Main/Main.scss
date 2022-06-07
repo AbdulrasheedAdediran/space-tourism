@@ -1,0 +1,114 @@
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flexStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+$grey: #828282;
+$navy-blue: #17395c;
+$button-color: #00003d;
+$navy-blue: #044da1;
+$small-text: 0.8rem;
+$medium-text: 1rem;
+$large-text: 1.2rem;
+
+main {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 15% 85%;
+
+  .side-nav {
+    display: grid;
+    height: 45%;
+    padding-block: 2rem;
+
+    & div {
+      @include flexStart;
+      padding-inline: 1.5rem;
+    }
+
+    p {
+      color: $grey;
+      cursor: pointer;
+      &:hover {
+        color: $navy-blue;
+      }
+    }
+  }
+
+  .main {
+    display: grid;
+    grid-template-rows: 10% 90%;
+
+    & article:nth-child(1) {
+      line-height: 1.5;
+      padding-block: 1rem;
+      padding-inline: 3rem;
+
+      & p:nth-child(2) {
+        line-height: 1.5;
+        font-size: $small-text;
+        color: $grey;
+      }
+    }
+
+    & article:nth-child(2) {
+      display: grid;
+      grid-template-columns: 25% 75%;
+      margin-inline: 3rem;
+      padding-inline: 1.5rem;
+      & p {
+        line-height: 1.5;
+        padding-bottom: 2rem;
+        color: $grey;
+        cursor: pointer;
+        &:hover {
+          color: $navy-blue;
+        }
+      }
+      div:nth-child(1) {
+        height: 100%;
+        width: 70%;
+        border-right: 1px solid $grey;
+        padding-block: 5rem;
+      }
+    }
+
+    // .form-wrapper,
+    form {
+      padding-block: 5rem;
+      display: grid;
+      label {
+        margin-bottom: 0.5rem;
+      }
+      input {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid $grey;
+        width: 60%;
+      }
+      & ::placeholder {
+        color: $grey;
+        font-size: $small-text;
+      }
+      button {
+        width: 6rem;
+        padding: 0.75rem;
+        border-radius: 5px;
+        background: $grey;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+}

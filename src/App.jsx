@@ -1,9 +1,15 @@
 import React from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.scss";
+import Navbar from "../src/components/Navbar/Navbar";
+import Main from "../src/components/Main/Main";
 
 const App = () => {
-  return <main></main>;
+  return (
+    <div>
+      <Navbar />
+      <Main />
+    </div>
+  );
 };
 
 export default App;
