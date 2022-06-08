@@ -9,6 +9,7 @@
   justify-content: flex-start;
 }
 $grey: #828282;
+$light-grey: #cacaca;
 $navy-blue: #17395c;
 $button-color: #00003d;
 $navy-blue: #044da1;
@@ -22,16 +23,18 @@ main {
   grid-template-columns: 15% 85%;
 
   .side-nav {
-    display: grid;
-    height: 45%;
+    display: block;
+    height: 100%;
     padding-block: 2rem;
-
+    border-right: 1px solid $light-grey;
     & div {
       @include flexStart;
       padding-inline: 1.5rem;
     }
 
     p {
+      line-height: 1.5;
+      padding-block: 1rem;
       color: $grey;
       cursor: pointer;
       &:hover {
@@ -73,7 +76,7 @@ main {
       div:nth-child(1) {
         height: 100%;
         width: 70%;
-        border-right: 1px solid $grey;
+        border-right: 1px solid $light-grey;
         padding-block: 5rem;
       }
     }
@@ -89,7 +92,7 @@ main {
         margin-bottom: 1.5rem;
         padding: 1rem;
         border-radius: 5px;
-        border: 1px solid $grey;
+        border: 1px solid $light-grey;
         width: 60%;
       }
       & ::placeholder {
