@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Bellefair&display=swap");
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/*== Colors ==*/
+
+//*=== Colors ===*//
 $black: hsl(230, 35%, 7%);
 $grey: hsl(231, 77%, 90%);
 $white: hsl(0, 0%, 100%);
@@ -33,10 +27,11 @@ $barlow-condensed: "Barlow Condensed", sans-serif;
 $bellefair: "Bellefair", serif;
 
 //*== Mixins ==*//
-@mixin flex($justify-content) {
+@mixin flex($justify-content, $flex-direction: unset) {
   display: flex;
   align-items: center;
   justify-content: $justify-content;
+  flex-direction: $flex-direction;
 }
 
 @mixin bg-image-center($img-url) {
@@ -48,14 +43,28 @@ $bellefair: "Bellefair", serif;
   min-height: 100vh;
 }
 
+//*=== Default Reset ===*//
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 /*== UNIVERSAL STYLES (MOBILE FIRST) ==*/
 a {
   text-decoration: none;
   cursor: pointer;
 }
-li {
-  list-style: none;
-}
+
 h1,
 h2,
 h3,
@@ -73,12 +82,37 @@ html {
 body {
   font-size: 16px;
   font-weight: normal;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
   font-family: $barlow-condensed;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
+img {
+  max-width: 100%;
+  display: block;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
 
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /*== SMALL SCREEN MOBILE DEVICES ==*/
 @media (max-width: 300px) {
 }
