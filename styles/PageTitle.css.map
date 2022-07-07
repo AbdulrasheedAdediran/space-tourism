@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/components/page-title/PageTitle.scss"
+    ],
+    "names": [],
+    "file": "PageTitle.css"
+}

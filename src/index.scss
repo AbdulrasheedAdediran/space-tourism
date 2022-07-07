@@ -1,10 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Bellefair&display=swap");
 *,
-::before,
-::after {
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  /*== Colors ==*/
+  $black: hsl(230, 35%, 7%);
+  $grey: hsl(231, 77%, 90%);
+  $white: hsl(0, 0%, 100%);
+  $dark-tinted-white: hsla(0, 0%, 100%, 0.05);
+  $light-tinted-white: hsla(0, 0%, 100%, 0.5);
+  $light-tinted-black: hsl(230, 35%, 7%, 0.1);
+  $dark-tinted-black: hsl(230, 35%, 7%, 0.75);
+  $dark-tinted-grey: hsl(231, 77%, 90%, 0.75);
+
+  /*== Font Size ==*/
+  $xxl-heading: 150px;
+  $xl-heading: 100px;
+  $lg-heading: 56px;
+  $md-heading: 32px;
+  $sm-heading: 28px;
+  $lg-body-text: 16px;
+  $md-body-text: 14px;
+  $lg-xter-space: 4.75px;
+  $md-xter-space: 2.7px;
+  $sm-xter-space: 2.35px;
+
+  /*== Font Family ==*/
+  $barlow-condensed: "Barlow Condensed", sans-serif;
+  $bellefair: "Bellefair", serif;
+}
+
+//*== Mixins ==*//
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bg-image-center($img-url) {
+  background-image: url($img-url);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/*== UNIVERSAL STYLES (MOBILE FIRST) ==*/
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $bellefair;
+}
+
+html {
+  font-size: 16px;
+  width: 100%;
+  max-width: 1440px;
+}
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: $barlow-condensed;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/*== SMALL SCREEN MOBILE DEVICES ==*/
+@media (max-width: 300px) {
+}
+/*== REGULAR MOBILE DEVICES ==*/
+@media (max-width: 480px) {
+}
+
+/*== TABLETS & MOBILE DEVICES ==*/
+@media (max-width: 768px) {
+}
+
+/*== TABLETS ONLY ==*/
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+/*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
+@media (min-width: 768px) {
+}
+
+/*== LARGE SCREEN COMPUTERS ONLY ==*/
+@media (min-width: 1024px) {
 }

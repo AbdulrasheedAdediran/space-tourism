@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/pages/crew/Crew.scss"
+    ],
+    "names": [],
+    "file": "Crew.css"
+}
