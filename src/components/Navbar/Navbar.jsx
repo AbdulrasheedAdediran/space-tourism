@@ -1,31 +1,27 @@
-import { useEffect, useRef } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../../../assets/shared/logo.svg";
 const Navbar = () => {
-  const navigate = useNavigate();
-  const logoRef = useRef(null);
-  useEffect(() => {
-    const listener = () => {
-      if (logoRef && logoRef.current) {
-        navigate("/");
-      }
-    };
-    logoRef.current.addEventListener("click", listener);
-    return () => {
-      logoRef.current.removeEventListener("click", listener);
-    };
-  }, [logoRef]);
   return (
     <nav>
       <div>
-        <img ref={logoRef} src={logo} alt="Space tourism logo" />
+        <Link to="/">
+          <img src={logo} alt="Space tourism logo" />
+        </Link>
       </div>
 
       <div>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/destination">Destination</NavLink>
-        <NavLink to="/crew">Crew</NavLink>
-        <NavLink to="/technology">Technology</NavLink>
+        <NavLink to="/">
+          <span>00{""}</span> <span>Home</span>
+        </NavLink>
+        <NavLink to="/destination">
+          <span>01{""}</span> <span>Destination</span>
+        </NavLink>
+        <NavLink to="/crew">
+          <span>02{""}</span> <span>Crew</span>
+        </NavLink>
+        <NavLink to="/technology">
+          <span>03{""}</span> <span>Technology</span>
+        </NavLink>
       </div>
     </nav>
   );
