@@ -29,10 +29,10 @@ const SingleDestination = () => {
       </nav>
       <li>{name}</li>
       <li>
-        <img src={png} alt="" />
+        <img src={png} alt={`Image of ${name}`} />
       </li>
       <li>
-        <img src={webp} alt="" />
+        <img src={webp} alt={`Image of ${name}`} />
       </li>
       <li>{description}</li>
       <li>{distance}</li>
