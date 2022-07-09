@@ -1,6 +1,6 @@
 nav {
   .nav__links {
-    background-color: var($dark-tinted-black);
+    // background-color: var($dark-tinted-black);
     display: flex;
     padding-top: 1.25rem;
     padding-right: clamp(0.5rem, 7.5vw, 7.5rem);
@@ -10,7 +10,7 @@ nav {
 
   @supports (backdrop-filter: blur(2.5rem)) {
     .nav__links {
-      background-color: var($tinted-white);
+      // background-color: var($tinted-white);
       backdrop-filter: blur(2.5rem);
     }
   }
@@ -20,7 +20,7 @@ nav {
 
   .nav__links a {
     padding: 1.5rem 0;
-    color: var($grey);
+    // color: var($grey);
   }
   .nav__menu {
     display: none;
@@ -101,11 +101,11 @@ nav {
     width: 0;
     margin: 1.25rem auto 0 auto;
     height: 3px;
-    background-color: var($light-tinted-white);
+    // background-color: var($light-tinted-white);
     transition: 0.35s ease-out;
   }
   .nav__links li.active::after {
-    background-color: var($white);
+    // background-color: var($white);
     width: 100%;
   }
   .nav__links li:hover::after {
@@ -124,11 +124,11 @@ nav {
     width: 0;
     margin: 1.25rem auto 0 auto;
     height: 3px;
-    background-color: var($light-tinted-white);
+    // background-color: var($light-tinted-white);
     transition: 0.35s ease-out;
   }
   .nav__links li.active::after {
-    background-color: var($white);
+    // background-color: var($white);
     width: 100%;
   }
   .nav__links li:hover::after {
@@ -136,7 +136,7 @@ nav {
   }
   .nav__links::before {
     content: "";
-    background: var($grey);
+    // background: var($grey);
     display: flex;
     align-items: center;
     height: 1px;
