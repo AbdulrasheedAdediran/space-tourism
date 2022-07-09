@@ -1,5 +1,17 @@
+import data from "../../../data.json";
 const Destination = () => {
-  return <div>Destination</div>;
+  const destinations = data.destinations;
+  const [
+    {
+      name,
+      images: { png, webp },
+      description,
+      distance,
+      travel,
+    },
+  ] = destinations;
+
+  return <></>;
 };
 
 export default Destination;

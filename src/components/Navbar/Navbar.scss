@@ -26,6 +26,12 @@ nav {
     display: none;
   }
 }
+.link {
+  color: blue;
+}
+.active {
+  color: red;
+}
 /*== SMALL SCREEN MOBILE DEVICES ==*/
 @media (max-width: 300px) {
 }
