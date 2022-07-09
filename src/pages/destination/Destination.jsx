@@ -13,7 +13,7 @@ const Destination = () => {
   ] = destinations;
 
   return (
-    <>
+    <section>
       <nav>
         {destinations.map((destination) => (
           <nav key={destination.name}>
@@ -25,13 +25,10 @@ const Destination = () => {
       <li>
         <img src={png} alt="" />
       </li>
-      {/* <li>
-            <img src={destination.webp} alt="" />
-          </li> */}
       <li>{description}</li>
       <li>{distance}</li>
       <li>{travel}</li>
-    </>
+    </section>
   );
 };
 
