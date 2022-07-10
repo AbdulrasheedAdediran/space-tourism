@@ -1,11 +1,11 @@
 import data from "../../../data.json";
-const crews = data.crew;
-const {
-  name,
-  images: { png, webp },
-  role,
-  bio,
-} = crews;
+const crew = data.crew;
+// const {
+//   name,
+//   images: { png, webp },
+//   role,
+//   bio,
+// } = crew;
 
 const Crew = () => {
   return <div>Crew</div>;
