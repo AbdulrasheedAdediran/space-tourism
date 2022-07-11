@@ -13,8 +13,7 @@ const SingleDestination = () => {
     distance,
     travel,
   } = destination;
-  console.log(png);
-  console.log(webp);
+
   return (
     <section>
       <h1>{destinationName}</h1>
