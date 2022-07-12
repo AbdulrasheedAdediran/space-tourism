@@ -14,12 +14,14 @@ const App = () => {
       <Routes>
         <Route path="/" exact element={<SharedLayout />}>
           <Route index element={<Homepage />} />
-          <Route path="/destination" exact element={<Destination />} />
-          <Route
-            path="/destination/:destinationName"
-            exact
-            element={<SingleDestination />}
-          />
+          <Route path="/destination" exact element={<Destination />}>
+            <Route
+              path="/destination/:destinationName"
+              exact
+              element={<SingleDestination />}
+            />
+          </Route>
+
           <Route path="/crew" exact element={<Crew />} />
           <Route path="/technology" exact element={<Technology />} />
           <Route path="*" element={<Error />} />
