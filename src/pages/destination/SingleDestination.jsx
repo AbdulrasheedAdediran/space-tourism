@@ -21,7 +21,12 @@ const SingleDestination = () => {
       <h1>Active Destination: {destinationName}</h1>
 
       <li>{name}</li>
-
+      {/* <li>
+        <img src={png} alt={`Image of ${name}`} />
+      </li>
+      <li>
+        <img src={webp} alt={`Image of ${name}`} />
+      </li> */}
       <li>{description}</li>
       <li>{distance}</li>
       <li>{travel}</li>

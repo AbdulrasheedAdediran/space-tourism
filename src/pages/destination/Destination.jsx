@@ -1,7 +1,18 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useParams } from "react-router-dom";
 import data from "../../../data.json";
 const Destination = () => {
+  const { moon } = useParams();
   const destinations = data.destinations;
+  // const destination = destinations.find(
+  //   (destination) => destination.name === destinationName
+  // );
+  const {
+    name,
+    // images: { png, webp },
+    description,
+    distance,
+    travel,
+  } = destinations;
 
   return (
     <section>
