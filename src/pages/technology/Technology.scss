@@ -1,0 +1,14 @@
+.technology {
+  .link {
+    background: black;
+    aspect-ratio: 1/1;
+    width: 50px;
+    border-radius: 100%;
+    color: white;
+    border: 2px solid blue;
+  }
+  .active {
+    background: grey;
+    color: black;
+  }
+}
