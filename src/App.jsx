@@ -4,7 +4,6 @@ import "./App.scss";
 import Crew from "./pages/crew/Crew";
 import Technology from "./pages/Technology/Technology";
 import Destination from "./pages/destination/Destination";
-import SingleDestination from "./pages/destination/SingleDestination";
 import SharedLayout from "./pages/SharedLayout";
 import Error from "./pages/Error";
 
@@ -14,14 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" exact element={<SharedLayout />}>
           <Route index element={<Homepage />} />
-          <Route path="/destination" exact element={<Destination />}>
-            <Route
-              path="/destination/:destinationName"
-              exact
-              element={<SingleDestination />}
-            />
-          </Route>
-
+          <Route path="/destination" exact element={<Destination />} />
           <Route path="/crew" exact element={<Crew />} />
           <Route path="/technology" exact element={<Technology />} />
           <Route path="*" element={<Error />} />
