@@ -1,71 +1,81 @@
 import { useState } from "react";
 import data from "../../../data.json";
 const Destination = () => {
-  const destinations = data.destinations;
   const [index, setIndex] = useState(0);
+  const [activeButton, setActiveButton] = useState("moonBtn");
+  const destinations = data.destinations;
   const activeDestination = destinations[index];
-  const [activeName, setActiveName] = useState("moonBtn");
   const { name, images, description, distance, travel } = activeDestination;
 
   return (
-    <section>
-      <h1>
+    <section className="destination">
+      <h2>
         <span>00</span> <span>Pick your destination</span>
-      </h1>
+      </h2>
+
       <div>
-        <button
-          id="moonBtn"
-          className={`link ${activeName === "moonBtn" ? "active" : ""}`}
-          onClick={() => {
-            setIndex(0);
-            setActiveName("moonBtn");
-          }}
-        >
-          Moon
-        </button>
-        <button
-          id="marsBtn"
-          className={`link ${activeName === "marsBtn" ? "active" : ""}`}
-          onClick={() => {
-            setIndex(1);
-            setActiveName("marsBtn");
-          }}
-        >
-          Mars
-        </button>
-        <button
-          id="europaBtn"
-          className={`link ${activeName === "europaBtn" ? "active" : ""}`}
-          onClick={() => {
-            setIndex(2);
-            setActiveName("europaBtn");
-          }}
-        >
-          Europa
-        </button>
-        <button
-          id="titanBtn"
-          className={`link ${activeName === "titanBtn" ? "active" : ""}`}
-          onClick={() => {
-            setIndex(3);
-            setActiveName("titanBtn");
-          }}
-        >
-          Titan
-        </button>
+        <img src={images.png} alt="" className="desktop" />
+        {/* <img src={images.webp} alt="" className="mobile" /> */}
       </div>
 
       <article>
-        <div>{name}</div>
-        <div>
-          <img src={images.png} alt="" className="desktop" />
+        <nav>
+          <button
+            id="moonBtn"
+            className={`link ${activeButton === "moonBtn" ? "active" : ""}`}
+            onClick={() => {
+              setIndex(0);
+              setActiveButton("moonBtn");
+            }}
+          >
+            Moon
+          </button>
+          <button
+            id="marsBtn"
+            className={`link ${activeButton === "marsBtn" ? "active" : ""}`}
+            onClick={() => {
+              setIndex(1);
+              setActiveButton("marsBtn");
+            }}
+          >
+            Mars
+          </button>
+          <button
+            id="europaBtn"
+            className={`link ${activeButton === "europaBtn" ? "active" : ""}`}
+            onClick={() => {
+              setIndex(2);
+              setActiveButton("europaBtn");
+            }}
+          >
+            Europa
+          </button>
+          <button
+            id="titanBtn"
+            className={`link ${activeButton === "titanBtn" ? "active" : ""}`}
+            onClick={() => {
+              setIndex(3);
+              setActiveButton("titanBtn");
+            }}
+          >
+            Titan
+          </button>
+        </nav>
+        <div class="text-content">
+          <h1>{name}</h1>
+
+          <p>{description}</p>
+          <div className="dist-and-time">
+            <div>
+              <p>AVG. Distance</p>
+              <p>{distance}</p>
+            </div>
+            <div>
+              <p>EST. Travel Time</p>
+              <p>{travel}</p>
+            </div>
+          </div>
         </div>
-        {/* <div>
-          <img src={images.webp} alt="" className="mobile" />
-        </div> */}
-        <div>{description}</div>
-        <div>{distance}</div>
-        <div>{travel}</div>
       </article>
     </section>
   );
