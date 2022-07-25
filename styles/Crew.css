@@ -1,1 +1,18 @@
-/* No CSS *//*# sourceMappingURL=Crew.css.map */
+.crew .link {
+  background: blue;
+  aspect-ratio: 1/1;
+  width: 25px;
+  border-radius: 100%;
+}
+
+.crew .active {
+  background: red;
+}
+
+/*== SMALL SCREEN MOBILE DEVICES ==*/
+/*== REGULAR MOBILE DEVICES ==*/
+/*== TABLETS & MOBILE DEVICES ==*/
+/*== TABLETS ONLY ==*/
+/*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
+/*== LARGE SCREEN COMPUTERS ONLY ==*/
+/*# sourceMappingURL=Crew.css.map */

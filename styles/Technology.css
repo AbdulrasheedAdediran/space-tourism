@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=Technology.css.map */
+.technology .link {
+  background: black;
+  aspect-ratio: 1/1;
+  width: 50px;
+  border-radius: 100%;
+  color: white;
+  border: 2px solid blue;
+}
+
+.technology .active {
+  background: grey;
+  color: black;
+}
+/*# sourceMappingURL=Technology.css.map */

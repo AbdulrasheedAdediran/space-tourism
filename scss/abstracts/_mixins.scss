@@ -1,0 +1,54 @@
+@use "scss/abstracts/variables" as *;
+//*== Mixins ==*//
+@mixin flex(
+  $align-items: center,
+  $justify-content: space-between,
+  $flex-direction: unset
+) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+}
+
+@mixin bg-image($img-url) {
+  background-image: url($img-url);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  inset: 0;
+}
+
+@mixin white-barlow-text($font-size: inherit) {
+  font-family: $barlow-condensed;
+  font-size: $font-size;
+  color: $grey;
+}
+@mixin black-barlow-text($font-size: inherit) {
+  font-family: $barlow-condensed;
+  font-size: $font-size;
+  color: $tinted-black-dark;
+}
+@mixin grey-barlow-text($font-size: inherit) {
+  font-family: $barlow-condensed;
+  font-size: $font-size;
+  color: $grey;
+}
+@mixin white-bellefair-text($font-size: inherit) {
+  font-family: $bellefair;
+  font-size: $font-size;
+  color: $grey;
+}
+@mixin black-bellefair-text($font-size: inherit) {
+  font-family: $bellefair;
+  font-size: $font-size;
+  color: $tinted-black-dark;
+}
+@mixin grey-bellefair-text($font-size: inherit) {
+  font-family: $bellefair;
+  font-size: $font-size;
+  color: $grey;
+}

@@ -4,3 +4,26 @@
 .active {
   color: red;
 }
+
+/*== SMALL SCREEN MOBILE DEVICES ==*/
+@media (max-width: 300px) {
+}
+/*== REGULAR MOBILE DEVICES ==*/
+@media (max-width: 480px) {
+}
+
+/*== TABLETS & MOBILE DEVICES ==*/
+@media (max-width: 768px) {
+}
+
+/*== TABLETS ONLY ==*/
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+/*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
+@media (min-width: 769px) {
+}
+
+/*== LARGE SCREEN COMPUTERS ONLY ==*/
+@media (min-width: 1024px) {
+}

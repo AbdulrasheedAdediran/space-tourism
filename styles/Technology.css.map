@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AACE,WADS,CACT,KAAK,CAAC;EACJ,UAAU,EAAE,KAAK;EACjB,YAAY,EAAE,GAAG;EACjB,KAAK,EAAE,IAAI;EACX,aAAa,EAAE,IAAI;EACnB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,cAAc;CACvB;;AARH,AASE,WATS,CAST,OAAO,CAAC;EACN,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,KAAK;CACb",
     "sources": [
         "../src/pages/technology/Technology.scss"
     ],

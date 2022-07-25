@@ -1,52 +1,8 @@
+@use "scss/abstracts/variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Bellefair&display=swap");
 
-//*=== Colors ===*//
-$black: hsl(230, 35%, 7%);
-$grey: hsl(231, 77%, 90%);
-$white: hsl(0, 0%, 100%);
-$dark-tinted-white: hsla(0, 0%, 100%, 0.05);
-$light-tinted-white: hsla(0, 0%, 100%, 0.5);
-$light-tinted-black: hsl(230, 35%, 7%, 0.1);
-$dark-tinted-black: hsl(230, 35%, 7%, 0.75);
-$dark-tinted-grey: hsl(231, 77%, 90%, 0.75);
-
-/*== Font Size ==*/
-$xxl-heading: 150px;
-$xl-heading: 100px;
-$lg-heading: 56px;
-$md-heading: 32px;
-$sm-heading: 28px;
-$lg-body-text: 16px;
-$md-body-text: 14px;
-$lg-xter-space: 4.75px;
-$md-xter-space: 2.7px;
-$sm-xter-space: 2.35px;
-
-/*== Font Family ==*/
-$barlow-condensed: "Barlow Condensed", sans-serif;
-$bellefair: "Bellefair", serif;
-
-//*== Mixins ==*//
-@mixin flex($justify-content, $flex-direction: unset) {
-  display: flex;
-  align-items: center;
-  justify-content: $justify-content;
-  flex-direction: $flex-direction;
-}
-
-@mixin bg-image-center($img-url) {
-  background-image: url($img-url);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-}
-
-//*=== Default Reset ===*//
-*,
-*::before,
-*::after {
+//*=== Default Reset ===*// *, *: : before, *:
+:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -66,12 +22,19 @@ a {
 }
 
 h1,
-h2,
 h3,
+h5 {
+  font-family: $barlow-condensed;
+  letter-spacing: $md-xter-space;
+  text-transform: uppercase;
+  color: $grey;
+}
+h2,
 h4,
-h5,
 h6 {
   font-family: $bellefair;
+  text-transform: uppercase;
+  color: $white;
 }
 
 html {
@@ -133,7 +96,7 @@ button {
 }
 
 /*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 }
 
 /*== LARGE SCREEN COMPUTERS ONLY ==*/
