@@ -18,14 +18,17 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  position: relative;
+  position: absolute;
   inset: 0;
+  // top: 0;
+  // left: 0;
+  // right: 0;
 }
 
 @mixin white-barlow-text($font-size: inherit) {
   font-family: $barlow-condensed;
   font-size: $font-size;
-  color: $grey;
+  color: $white;
 }
 @mixin black-barlow-text($font-size: inherit) {
   font-family: $barlow-condensed;

@@ -1,0 +1,14 @@
+@use "scss/abstracts/variables" as *;
+.navbar {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+/*== SMALL SCREEN MOBILE DEVICES ==*/
+/*== REGULAR MOBILE DEVICES ==*/
+/*== TABLETS & MOBILE DEVICES ==*/
+/*== TABLETS ONLY ==*/
+/*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
+/*== LARGE SCREEN COMPUTERS ONLY ==*/
+/*# sourceMappingURL=NavBar.css.map */

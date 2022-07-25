@@ -1,8 +1,10 @@
 @use "scss/abstracts/variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Bellefair&display=swap");
 
-//*=== Default Reset ===*// *, *: : before, *:
-:after {
+//*=== Default Reset ===*//
+* *,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -51,6 +53,7 @@ body {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 img {
   max-width: 100%;
@@ -64,6 +67,7 @@ select {
 }
 
 button {
+  cursor: pointer;
   border: none;
   background: transparent;
 }
