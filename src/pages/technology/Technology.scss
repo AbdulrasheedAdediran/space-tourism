@@ -1,7 +1,7 @@
 @use "scss/abstracts/variables" as *;
 
 .technology {
-  .link {
+  .btn {
     background: black;
     aspect-ratio: 1/1;
     width: 50px;
@@ -9,7 +9,7 @@
     color: white;
     border: 2px solid blue;
   }
-  .active {
+  .btn-active {
     background: grey;
     color: $black;
   }

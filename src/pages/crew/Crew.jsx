@@ -19,19 +19,19 @@ const Crew = () => {
       <article>
         <nav>
           <button
-            className={`link ${activeIndex === 0 ? "active" : ""}`}
+            className={`btn ${activeIndex === 0 ? "btn-active" : ""}`}
             onClick={() => setActiveIndex(0)}
           ></button>
           <button
-            className={`link ${activeIndex === 1 ? "active" : ""}`}
+            className={`btn ${activeIndex === 1 ? "btn-active" : ""}`}
             onClick={() => setActiveIndex(1)}
           ></button>
           <button
-            className={`link ${activeIndex === 2 ? "active" : ""}`}
+            className={`btn ${activeIndex === 2 ? "btn-active" : ""}`}
             onClick={() => setActiveIndex(2)}
           ></button>
           <button
-            className={`link ${activeIndex === 3 ? "active" : ""}`}
+            className={`btn ${activeIndex === 3 ? "btn-active" : ""}`}
             onClick={() => setActiveIndex(3)}
           ></button>
         </nav>

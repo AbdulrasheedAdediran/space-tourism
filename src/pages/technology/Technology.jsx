@@ -21,19 +21,19 @@ const Technology = () => {
 
         <nav>
           <button
-            className={`link ${activeIndex === 0 ? "active" : ""}`}
+            className={`btn ${activeIndex === 0 ? "btn-active" : ""}`}
             onClick={() => setActiveIndex(0)}
           >
             1
           </button>
           <button
-            className={`link ${activeIndex === 1 ? "active" : ""}`}
+            className={`btn ${activeIndex === 1 ? "btn-active" : ""}`}
             onClick={() => setActiveIndex(1)}
           >
             2
           </button>
           <button
-            className={`link ${activeIndex === 2 ? "active" : ""}`}
+            className={`btn ${activeIndex === 2 ? "btn-active" : ""}`}
             onClick={() => setActiveIndex(2)}
           >
             3

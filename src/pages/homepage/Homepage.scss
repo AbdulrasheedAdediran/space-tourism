@@ -2,7 +2,9 @@
 @use "scss/abstracts/mixins" as *;
 
 .homepage {
-  @include bg-image("../../../assets/home/background-home-mobile.jpg");
+  position: relative;
+  border: 2px solid red;
+  height: 85vh;
 }
 /*== SMALL SCREEN MOBILE DEVICES ==*/
 @media (max-width: 300px) {
@@ -18,14 +20,12 @@
 /*== TABLETS ONLY ==*/
 @media (min-width: 481px) and (max-width: 768px) {
   .homepage {
-    @include bg-image("../../../assets/home/background-home-tablet.jpg");
   }
 }
 
 /*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
 @media (min-width: 769px) {
   .homepage {
-    @include bg-image("../../../assets/home/background-home-desktop.jpg");
   }
 }
 
