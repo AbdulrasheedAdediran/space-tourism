@@ -8,9 +8,9 @@ const Crew = () => {
   const { name, images, role, bio } = activeCrewMember;
   return (
     <section className="crew">
-      <h2>
+      <h1>
         <span>02</span> <span>Meet your crew</span>
-      </h2>
+      </h1>
 
       <div>
         <img src={images.webp} alt="" />

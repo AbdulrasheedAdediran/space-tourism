@@ -9,9 +9,9 @@ const Technology = () => {
   const { name, images, description } = activeTech;
   return (
     <section className="technology">
-      <h2>
+      <h1>
         <span>03</span> <span>Space launch 101</span>
-      </h2>
+      </h1>
 
       <article>
         <div>

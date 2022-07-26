@@ -8,9 +8,9 @@ const Destination = () => {
 
   return (
     <section className="destination">
-      <h2>
+      <h1>
         <span>00</span> <span>Pick your destination</span>
-      </h2>
+      </h1>
 
       <div>
         <img src={images.webp} alt="" className="mobile" />

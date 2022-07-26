@@ -1,1 +1,15 @@
-/* No CSS *//*# sourceMappingURL=Homepage.css.map */
+@use "scss/abstracts/variables" as *;
+@use "scss/abstracts/mixins" as *;
+.homepage {
+  position: relative;
+  border: 1px solid yellow;
+  height: 85vh;
+}
+
+/*== SMALL SCREEN MOBILE DEVICES ==*/
+/*== REGULAR MOBILE DEVICES ==*/
+/*== TABLETS & MOBILE DEVICES ==*/
+/*== TABLETS ONLY ==*/
+/*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
+/*== LARGE SCREEN COMPUTERS ONLY ==*/
+/*# sourceMappingURL=Homepage.css.map */

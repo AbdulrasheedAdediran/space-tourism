@@ -1,11 +1,11 @@
-.crew .link {
+.crew .btn {
   background: blue;
   aspect-ratio: 1/1;
   width: 25px;
   border-radius: 100%;
 }
 
-.crew .active {
+.crew .btn-active {
   background: red;
 }
 
