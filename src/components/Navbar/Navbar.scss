@@ -140,6 +140,7 @@
   .navbar {
     .logo {
       top: 1rem;
+      left: 1rem;
     }
 
     .nav__links {
@@ -164,12 +165,14 @@
 @media (min-width: 769px) {
   .navbar {
     .logo {
-      top: 1.9rem;
+      top: 2rem;
+      left: 2rem;
       margin-right: 2rem;
     }
     .nav__links {
       // border: 1px solid red;
-      padding-inline: clamp(3.5rem, 7.5vw, 5rem) 7.5rem;
+      // padding-inline: clamp(3.5rem, 7.5vw, 5rem) 7.5rem;
+      padding-inline: 5vw 8vw;
       position: fixed;
       top: 1rem;
       right: 0;
@@ -185,11 +188,13 @@
         right: 95%;
         top: 30%;
         vertical-align: middle;
-        width: clamp(30rem, 37.5vw, 35rem);
+        width: 70%;
       }
     }
     .link {
-      margin-inline: clamp(1rem, 5vw, 1.5rem);
+      margin-inline: 2vw;
+      // border: 2px solid red;
+      // margin-inline: clamp(1rem, 5vw, 1.5rem);
     }
   }
 }

@@ -12,9 +12,10 @@ const Crew = () => {
         <span>02</span> <span>Meet your crew</span>
       </h1>
 
-      <div>
-        <img src={images.webp} alt="" />
-      </div>
+      <picture>
+        <source type="image/webp" srcSet={images.webp} />
+        <img src={images.png} alt={`Pictore of ${name}, a crew member`} />
+      </picture>
 
       <article>
         <nav>

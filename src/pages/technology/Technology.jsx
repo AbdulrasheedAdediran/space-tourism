@@ -7,6 +7,7 @@ const Technology = () => {
   const technology = data.technology;
   const activeTech = technology[activeIndex];
   const { name, images, description } = activeTech;
+
   return (
     <section className="technology">
       <h1>
@@ -14,10 +15,26 @@ const Technology = () => {
       </h1>
 
       <article>
-        <div>
-          <img src={images.portrait} alt="" />
-          <img src={images.landscape} alt="" />
-        </div>
+        <picture>
+          <source
+            media="(max-width:768px)"
+            type="image/jpeg"
+            srcSet={images.landscape}
+            alt={`Image of ${name}`}
+          />
+          <source
+            media="(min-width:769px)"
+            type="image/jpeg"
+            srcSet={images.portrait}
+            alt={`Image of ${name}`}
+          />
+
+          <img
+            src={images.portrait}
+            className="portrait"
+            alt={`Image of ${name}`}
+          />
+        </picture>
 
         <nav>
           <button

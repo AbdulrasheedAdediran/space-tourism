@@ -2,9 +2,9 @@
 @use "scss/abstracts/mixins" as *;
 
 .homepage {
-  position: relative;
-  border: 1px solid yellow;
-  height: 85vh;
+  // position: relative;
+  // border: 1px solid yellow;
+  // height: 85vh;
 }
 /*== SMALL SCREEN MOBILE DEVICES ==*/
 @media (max-width: 300px) {
@@ -26,6 +26,7 @@
 /*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
 @media (min-width: 769px) {
   .homepage {
+    padding-left: 7rem;
   }
 }
 

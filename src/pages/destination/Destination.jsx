@@ -12,9 +12,10 @@ const Destination = () => {
         <span>00</span> <span>Pick your destination</span>
       </h1>
 
-      <div>
-        <img src={images.webp} alt="" className="mobile" />
-      </div>
+      <picture>
+        <source type="image/webp" srcSet={images.webp} />
+        <img src={images.png} alt={`Pictoral illustration of ${name}`} />
+      </picture>
 
       <article>
         <nav>
