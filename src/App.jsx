@@ -1,5 +1,6 @@
 import { useState, useLayoutEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Homepage from "./pages/homepage/Homepage";
 import "./App.scss";
 import Crew from "./pages/crew/Crew";
@@ -18,17 +19,19 @@ const App = () => {
   }, [location]);
 
   return (
-    <div className={`main-bg ${activePage}`}>
-      <Routes>
-        <Route path="/" exact element={<SharedLayout />}>
-          <Route index element={<Homepage />} />
-          <Route path="/destination" exact element={<Destination />} />
-          <Route path="/crew" exact element={<Crew />} />
-          <Route path="/technology" exact element={<Technology />} />
-          <Route path="*" element={<Error />} />
-        </Route>
-      </Routes>
-    </div>
+    <AnimatePresence exitBeforeEnter>
+      <div className={`main-bg ${activePage}`}>
+        <Routes key={location.pathname} location={location}>
+          <Route path="/" exact element={<SharedLayout />}>
+            <Route index element={<Homepage />} />
+            <Route path="/destination" exact element={<Destination />} />
+            <Route path="/crew" exact element={<Crew />} />
+            <Route path="/technology" exact element={<Technology />} />
+            <Route path="*" element={<Error />} />
+          </Route>
+        </Routes>
+      </div>
+    </AnimatePresence>
   );
 };
 
