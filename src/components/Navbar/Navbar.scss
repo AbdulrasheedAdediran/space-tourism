@@ -44,12 +44,8 @@
     }
   }
 
-  .nav__links.show {
-    transform: translateX(0%);
-  }
   .link {
     @include white-barlow-text();
-    @include flex(center, flex-start);
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 400;
@@ -57,7 +53,7 @@
     width: 100%;
 
     span:nth-of-type(1) {
-      margin-inline: clamp(2rem, 5vw, 3rem) 0.25rem;
+      margin-right: 0.25rem;
       font-weight: 700;
       width: 1.5rem;
       // border: 2px solid red;
@@ -85,16 +81,16 @@
     transform: translateX(120%);
     transition: transform 0.5s ease-out;
     // border: 2px solid red;
-  }
 
+    &.show {
+      transform: translateX(0%);
+    }
+  }
   .link {
     line-height: 3.5;
 
     span:nth-of-type(1) {
       margin-inline: clamp(2rem, 5vw, 3rem) 0.25rem;
-      font-weight: 700;
-      width: 1.5rem;
-      // border: 2px solid red;
     }
   }
 }
@@ -103,40 +99,37 @@
 @media (min-width: 481px) {
   .navbar {
     // border: 2px solid white;
-    margin-left: clamp(1.5rem, 5vw, 2rem);
+    // margin-left: clamp(1.5rem, 5vw, 2rem);
 
-    .nav__links {
-      @include flex(center, space-around);
-      // border: 1px solid red;
-    }
     .menu-btn {
       display: none;
     }
+    .logo {
+      position: fixed;
+    }
     .nav__links {
-      padding-block: 1.5rem;
-      width: 100%;
+      @include flex(center, flex-start);
+      padding-top: 1rem;
     }
 
-    // .link::after {
-    //   content: "";
-    //   height: 2px;
-    //   background: $white;
-    //   width: 0;
-    //   display: inline-block;
-    //   position: relative;
-    //   transition: 0.5s all ease-out;
-    // }
-    // .active::after {
-    //   width: 100%;
-    // }
-
     .link {
-      @include flex(center, center);
-      width: 0;
-      line-height: 1.5;
-
-      &:hover {
-        background: tomato;
+      line-height: 2.5;
+      transition: all 0.5s;
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        margin: 0.9rem auto 0 auto;
+        height: 3px;
+        background-color: $tinted-white-light;
+        transition: 0.35s ease-out;
+      }
+      &.active::after {
+        background-color: $white;
+        width: 100%;
+      }
+      &:hover::after {
+        width: 100%;
       }
     }
   }
@@ -146,22 +139,19 @@
 @media (min-width: 481px) and (max-width: 768px) {
   .navbar {
     .logo {
-      position: absolute;
       top: 1rem;
-      // margin-top: clamp(1.5rem, 5vw, 2rem);
     }
 
     .nav__links {
-      @include flex(center, space-evenly);
       // border: 1px solid red;
-      position: absolute;
-      width: clamp(25rem, 60vw, 30rem);
+      padding-inline: clamp(0.75rem, 3.5vw, 1rem);
+      position: fixed;
       top: 0;
       right: 0;
     }
 
     .link {
-      margin-right: clamp(1.5rem, 5vw, 2rem);
+      margin-inline: clamp(0.75rem, 3.5vw, 1rem);
     }
     span:nth-of-type(1) {
       display: none;
@@ -173,12 +163,33 @@
 /*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
 @media (min-width: 769px) {
   .navbar {
-    span:nth-of-type(1) {
-      // margin-inline: clamp(2rem, 5vw, 3rem) 0.25rem;
-      margin-inline: 0;
-      font-weight: 700;
-      width: 1.5rem;
-      // border: 2px solid red;
+    .logo {
+      top: 1.9rem;
+      margin-right: 2rem;
+    }
+    .nav__links {
+      // border: 1px solid red;
+      padding-inline: clamp(3.5rem, 7.5vw, 5rem) 7.5rem;
+      position: fixed;
+      top: 1rem;
+      right: 0;
+
+      &::before {
+        content: "";
+        background: $tinted-grey-dark;
+        display: flex;
+        align-items: center;
+        height: 0.5px;
+        margin-top: 1rem;
+        position: absolute;
+        right: 95%;
+        top: 30%;
+        vertical-align: middle;
+        width: clamp(30rem, 37.5vw, 35rem);
+      }
+    }
+    .link {
+      margin-inline: clamp(1rem, 5vw, 1.5rem);
     }
   }
 }
