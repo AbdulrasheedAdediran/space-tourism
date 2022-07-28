@@ -3,7 +3,7 @@ import "./Homepage.scss";
 const Homepage = () => {
   return (
     <section className="homepage">
-      <div>
+      <div className="home-content">
         <h1>So, you want to travel to</h1>
         <h2>Space</h2>
         <p>
@@ -14,7 +14,9 @@ const Homepage = () => {
         </p>
       </div>
       <div>
-        <Link to="/destination">Explore</Link>
+        <Link to="/destination" className="explore-btn">
+          Explore
+        </Link>
       </div>
     </section>
   );
