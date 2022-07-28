@@ -13,11 +13,9 @@ const Homepage = () => {
           experience!
         </p>
       </div>
-      <div>
-        <Link to="/destination" className="explore-btn">
-          Explore
-        </Link>
-      </div>
+      <Link to="/destination" className="explore-btn">
+        Explore
+      </Link>
     </section>
   );
 };

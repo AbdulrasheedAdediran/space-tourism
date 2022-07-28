@@ -1,8 +1,72 @@
-.btn {
-  color: blue;
-}
-.btn-active {
-  color: red;
+@use "scss/abstracts/variables" as *;
+@use "scss/abstracts/mixins" as *;
+
+.destination {
+  display: block;
+  text-align: center;
+  padding-inline: 1rem;
+  padding-bottom: 5vh;
+
+  h1,
+  h2,
+  .btn {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  h1 {
+    @include white-barlow-condensed-text();
+    letter-spacing: $md-xter-space;
+
+    span:nth-of-type(1) {
+      color: $tinted-white-light;
+    }
+  }
+  picture {
+    aspect-ratio: 1;
+    width: clamp(8.25rem, 45vw, 14.5rem);
+    margin-block: 5vh;
+    display: inline-grid;
+    place-items: center;
+  }
+  nav {
+    @include flex(center, space-around);
+    margin-bottom: 0.75rem;
+  }
+  .btn {
+    @include grey-barlow-condensed-text();
+    font-size: 0.875rem;
+    letter-spacing: $sm-xter-space;
+    @include link-active(0.5rem);
+
+    &.active {
+      @include white-barlow-condensed-text();
+      font-size: 0.875rem;
+    }
+  }
+  .text-content {
+    h2 {
+      font-size: clamp(3rem, 15vw, 3.5rem);
+    }
+    .description {
+      padding-bottom: 5vh;
+      margin-bottom: 5vh;
+      border-bottom: 1px solid hsl(231, 77%, 90%, 0.25);
+    }
+    .dist-and-time {
+      @include flex(center, space-between, column);
+      gap: 1.5rem;
+
+      h3 {
+        font-size: 0.875rem;
+        letter-spacing: $sm-xter-space;
+      }
+
+      p {
+        @include white-bellefair-text(1.75rem);
+        text-transform: uppercase;
+      }
+    }
+  }
 }
 
 /*== SMALL SCREEN MOBILE DEVICES ==*/

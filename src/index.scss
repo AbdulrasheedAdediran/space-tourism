@@ -1,5 +1,6 @@
 @use "scss/abstracts/variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&display=swap");
 
 //*=== Default Reset ===*//
 * *,
@@ -49,7 +50,7 @@ body {
   font-weight: normal;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: $barlow-condensed;
+  font-family: $barlow;
   color: $grey;
   min-height: 100vh;
   width: 100%;

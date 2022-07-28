@@ -27,8 +27,8 @@ const App = () => {
             <Route path="/destination" exact element={<Destination />} />
             <Route path="/crew" exact element={<Crew />} />
             <Route path="/technology" exact element={<Technology />} />
-            <Route path="*" element={<Error />} />
           </Route>
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
     </AnimatePresence>

@@ -9,7 +9,6 @@
   .home-content {
     text-align: center;
     // border: 1px solid red;
-    // align-self: start;
     h1 {
       letter-spacing: $md-xter-space;
     }
@@ -28,12 +27,6 @@
       line-height: 1.6rem;
     }
   }
-  // div:nth-of-type(2) {
-  //   // align-self: center;
-  //   // border-radius: 50%;
-  //   display: grid;
-  //   // place-items: center;
-  // }
 
   .explore-btn {
     display: inline-grid;
@@ -60,7 +53,7 @@
     background: hsla(0, 0%, 100%, 0.1);
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 500ms linear, transform 500ms ease-in-out;
+    transition: opacity 500ms linear, transform 500ms ease-out;
   }
 
   .explore-btn:hover::after,
@@ -71,16 +64,31 @@
 }
 /*== SMALL SCREEN MOBILE DEVICES ==*/
 @media (max-width: 300px) {
+  .home-content {
+    border: 1px solid blue;
+    h1 {
+      font-size: 0.85rem;
+      letter-spacing: $sm-xter-space;
+    }
+    h1,
+    h2 {
+      padding-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: clamp(3rem, 10vw, $lg-heading);
+    }
+    p {
+      line-height: 1.75rem;
+      font-size: 0.85rem;
+    }
+  }
 }
 /*== REGULAR MOBILE DEVICES ==*/
 @media (max-width: 480px) {
   .homepage {
     padding-inline: 1.5rem;
   }
-}
-
-/*== TABLETS & MOBILE DEVICES ==*/
-@media (max-width: 768px) {
 }
 
 /*== TABLETS ONLY ==*/
@@ -122,15 +130,12 @@
       text-align: left;
       // border: 1px solid red;
       h1 {
-        text-align: left;
         font-size: clamp(1.25rem, 15vw, 1.75rem);
         letter-spacing: $xl-xter-space;
       }
       h1,
       h2 {
-        display: flex;
-        text-align: center;
-        font-weight: 400;
+        text-align: left;
         padding-bottom: 0.75rem;
         // border: 1px solid blue;
       }
@@ -144,8 +149,4 @@
       }
     }
   }
-}
-
-/*== LARGE SCREEN COMPUTERS ONLY ==*/
-@media (min-width: 1024px) {
 }

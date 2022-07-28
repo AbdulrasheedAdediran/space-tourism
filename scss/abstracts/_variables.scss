@@ -7,7 +7,7 @@ $tinted-white-light: hsla(0, 0%, 100%, 0.5);
 $tinted-black-dark: hsl(230, 35%, 7%, 0.75);
 $tinted-black-light: hsl(230, 35%, 7%, 0.1);
 $tinted-grey-dark: hsl(231, 77%, 90%, 0.75);
-
+// hsl(230, 35%, 7%)
 /*== Font Size ==*/
 $xxl-heading: 9.375rem;
 $xl-heading: 6.25rem;
@@ -22,5 +22,6 @@ $md-xter-space: 0.17rem;
 $sm-xter-space: 0.15rem;
 
 /*== Font Family ==*/
+$barlow: "Barlow", sans-serif;
 $barlow-condensed: "Barlow Condensed", sans-serif;
 $bellefair: "Bellefair", serif;
