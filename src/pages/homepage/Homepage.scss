@@ -86,6 +86,26 @@
 /*== TABLETS ONLY ==*/
 @media (min-width: 481px) and (max-width: 768px) {
   .homepage {
+    .home-content {
+      max-width: 60vw;
+      // border: 1px solid red;
+      h1 {
+        font-size: 1.25rem;
+        letter-spacing: $lg-xter-space;
+      }
+      h1,
+      h2 {
+        padding-bottom: 1rem;
+      }
+
+      h2 {
+        // border: 1px solid blue;
+        font-size: clamp(5rem, 20vw, $xxl-heading);
+      }
+      p {
+        line-height: 1.75rem;
+      }
+    }
   }
 }
 
