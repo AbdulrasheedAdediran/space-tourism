@@ -113,6 +113,36 @@
 @media (min-width: 769px) {
   .homepage {
     padding-left: 7rem;
+    @include flex(flex-end, space-between, row);
+    height: 85vh;
+    padding: 0 10vw 10vh 10vw;
+    // border: 1px solid red;
+
+    .home-content {
+      max-width: 32vw;
+      text-align: left;
+      // align-self: start;
+      h1 {
+        text-align: left;
+        font-size: clamp(1.25rem, 15vw, 1.75rem);
+        letter-spacing: $xl-xter-space;
+      }
+      h1,
+      h2 {
+        display: flex;
+        text-align: center;
+        font-weight: 400;
+        padding-bottom: 0.75rem;
+        // border: 1px solid blue;
+      }
+
+      h2 {
+        font-size: clamp(5rem, 10vw, $xxl-heading);
+      }
+      p {
+        line-height: 1.6rem;
+      }
+    }
   }
 }
 
