@@ -115,13 +115,12 @@
     padding-left: 7rem;
     @include flex(flex-end, space-between, row);
     height: 85vh;
-    padding: 0 10vw 10vh 10vw;
-    // border: 1px solid red;
+    padding: 0 10vw 15vh 10vw;
 
     .home-content {
-      max-width: 32vw;
+      max-width: 30vw;
       text-align: left;
-      // align-self: start;
+      // border: 1px solid red;
       h1 {
         text-align: left;
         font-size: clamp(1.25rem, 15vw, 1.75rem);
@@ -140,6 +139,7 @@
         font-size: clamp(5rem, 10vw, $xxl-heading);
       }
       p {
+        font-size: 1.125rem;
         line-height: 1.6rem;
       }
     }
