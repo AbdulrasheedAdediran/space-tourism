@@ -5,7 +5,6 @@
   display: block;
   text-align: center;
   padding-inline: 1rem;
-  // padding-bottom: 7.5vh;
 
   h1,
   h2,
@@ -75,6 +74,9 @@
 }
 /*== REGULAR MOBILE DEVICES ==*/
 @media (max-width: 480px) {
+  .destination-pg {
+    padding-bottom: 7.5vh;
+  }
 }
 
 /*== TABLETS & DESKTOP DEVICES ==*/
@@ -88,7 +90,7 @@
     .text-content {
       .dist-and-time {
         @include flex();
-        max-width: 60%;
+        width: 60%;
         margin-inline: auto;
       }
     }
@@ -129,10 +131,57 @@
 
 /*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
 @media (min-width: 769px) {
-  .destination {
-  }
-}
+  .destination-pg {
+    @include flex(flex-start, space-between, column);
+    padding-inline: 0;
+    padding: 0 10vw 10vh 10vw;
+    height: 78.5vh;
+    article {
+      @include flex(center, space-between);
+      padding-left: 10vw;
+      // border: 2px solid red;
+      width: 100%;
+      margin-inline: auto;
+    }
+    picture {
+      width: clamp(20rem, 30vw, 22.5rem);
+      // display: inline-flex;
+      align-self: center;
+    }
+    .destination-content {
+      max-width: 30vw;
+      nav {
+        @include flex(center, flex-start);
 
-/*== LARGE SCREEN COMPUTERS ONLY ==*/
-@media (min-width: 1024px) {
+        button {
+          margin-right: 2.5vw;
+        }
+      }
+    }
+    .text-content {
+      text-align: left;
+
+      h2 {
+        font-size: clamp(6rem, 10vw, 6.25rem);
+      }
+
+      .description {
+        margin-bottom: 2.5vh;
+        font-size: 1.125rem;
+      }
+      .dist-and-time {
+        // border: 2px solid yellowgreen;
+        @include flex(center, flex-start);
+        width: 100%;
+        row-gap: 5rem;
+
+        div:nth-of-type(1) {
+          margin-right: 2.5vw;
+        }
+        p {
+          font-size: $sm-heading;
+        }
+      }
+    }
+  }
 }
