@@ -29,7 +29,6 @@
   img {
     width: 100%;
     height: 100%;
-    // border: 2px solid yellowgreen;
   }
 
   article {
@@ -76,18 +75,50 @@
 @media (max-width: 480px) {
 }
 
-/*== TABLETS & MOBILE DEVICES ==*/
-@media (max-width: 768px) {
+/*== TABLETS & DESKTOP DEVICES ==*/
+@media (min-width: 481px) {
+  .crew-pg {
+    padding-inline: 1.5rem;
+    margin-top: auto;
+    h1 {
+      text-align: left;
+    }
+
+    .crew-wrapper {
+      @include flex(center, space-between, column-reverse);
+    }
+    article {
+      border-top: none;
+      @include flex(center, space-between, column-reverse);
+
+      .crew-member {
+        max-width: 75vw;
+        max-lines: 3;
+        margin-bottom: 4vh;
+        // border: 2px solid yellowgreen;
+      }
+
+      nav {
+        position: relative;
+        z-index: 10;
+      }
+    }
+    picture {
+      position: absolute;
+      bottom: 0;
+      left: 50;
+      width: 55vw;
+      aspect-ratio: 1/1.15;
+      // border: 2px solid yellowgreen;
+      padding-top: 0;
+    }
+  }
 }
 
 /*== TABLETS ONLY ==*/
 @media (min-width: 481px) and (max-width: 768px) {
 }
 
-/*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
+/*== LAPTOPS & DESKTOP ONLY ==*/
 @media (min-width: 769px) {
-}
-
-/*== LARGE SCREEN COMPUTERS ONLY ==*/
-@media (min-width: 1024px) {
 }
