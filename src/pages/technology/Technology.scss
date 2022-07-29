@@ -1,17 +1,62 @@
 @use "scss/abstracts/variables" as *;
+@use "scss/abstracts/mixins" as *;
 
-.technology {
+.technology-pg {
+  min-height: 87.5vh;
+  // @include flex(center, space-between, column);
+  display: block;
+  // border: 1px solid red;
+  text-align: center;
+
+  h1,
+  picture,
+  h2,
   .btn {
-    background: black;
-    aspect-ratio: 1/1;
-    width: 50px;
-    border-radius: 100%;
-    color: white;
-    border: 2px solid blue;
+    text-transform: uppercase;
+    margin-bottom: 3.5vh;
+    font-weight: 400;
   }
-  .btn-active {
-    background: grey;
-    color: $black;
+  h1 {
+    @include page-heading-1();
+    font-size: 1rem;
+  }
+
+  article {
+    picture {
+      width: 100%;
+      // height: 25vh;
+      // aspect-ratio: 1/1;
+    }
+
+    nav {
+      @include flex(center, center);
+      column-gap: 3.5vw;
+
+      .btn {
+        background: transparent;
+        aspect-ratio: 1/1;
+        width: 2.5rem;
+        border-radius: 100%;
+        color: $white;
+        border: 1px solid $tinted-grey-dark;
+
+        &.active {
+          background: $white;
+          color: $black;
+        }
+      }
+    }
+
+    .technology-content {
+      padding-inline: 1rem;
+      h3 {
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
   }
 }
 
@@ -32,6 +77,9 @@
 
 /*== ALL LAPTOP/DESKTOP COMPUTERS ==*/
 @media (min-width: 769px) {
+  .technology-pg {
+    min-height: 85vh;
+  }
 }
 
 /*== LARGE SCREEN COMPUTERS ONLY ==*/

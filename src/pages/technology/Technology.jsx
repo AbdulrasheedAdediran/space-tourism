@@ -9,7 +9,7 @@ const Technology = () => {
   const { name, images, description } = activeTech;
 
   return (
-    <section className="technology">
+    <section className="technology-pg">
       <h1>
         <span>03</span> <span>Space launch 101</span>
       </h1>
@@ -38,27 +38,29 @@ const Technology = () => {
 
         <nav>
           <button
-            className={`btn ${activeIndex === 0 ? "btn-active" : ""}`}
+            className={`btn ${activeIndex === 0 ? "active" : ""}`}
             onClick={() => setActiveIndex(0)}
           >
             1
           </button>
           <button
-            className={`btn ${activeIndex === 1 ? "btn-active" : ""}`}
+            className={`btn ${activeIndex === 1 ? "active" : ""}`}
             onClick={() => setActiveIndex(1)}
           >
             2
           </button>
           <button
-            className={`btn ${activeIndex === 2 ? "btn-active" : ""}`}
+            className={`btn ${activeIndex === 2 ? "active" : ""}`}
             onClick={() => setActiveIndex(2)}
           >
             3
           </button>
         </nav>
-        <h4>The terminology</h4>
-        <h5>{name}</h5>
-        <p>{description}</p>
+        <div className="technology-content">
+          <h3>The terminology...</h3>
+          <h2>{name}</h2>
+          <p>{description}</p>
+        </div>
       </article>
     </section>
   );
