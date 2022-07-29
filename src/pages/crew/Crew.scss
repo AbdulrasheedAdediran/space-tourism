@@ -1,12 +1,71 @@
-.crew {
-  .btn {
-    background: blue;
-    aspect-ratio: 1/1;
-    width: 25px;
-    border-radius: 100%;
+@use "scss/abstracts/variables" as *;
+@use "scss/abstracts/mixins" as *;
+
+.crew-pg {
+  // border: 1px solid blue;
+  min-height: 85vh;
+  display: block;
+  padding-inline: 1rem;
+  text-align: center;
+
+  h1,
+  h2,
+  h4 {
+    font-weight: 400;
+    text-transform: uppercase;
   }
-  .btn-active {
-    background: red;
+
+  h1 {
+    @include page-heading-1();
+    font-size: 1rem;
+  }
+
+  picture {
+    width: 55%;
+    aspect-ratio: 1/1.5;
+    padding-top: 4vh;
+    margin-inline: auto;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    // border: 2px solid yellowgreen;
+  }
+
+  article {
+    padding-top: 4vh;
+    border-top: 1px solid hsl(231, 77%, 90%, 0.25);
+
+    nav {
+      @include flex(center, center);
+      column-gap: 4vw;
+      margin-bottom: 4vh;
+
+      .btn {
+        background: $tinted-white-dark;
+        aspect-ratio: 1/1;
+        width: 0.75rem;
+        border-radius: 100%;
+
+        &:hover {
+          background: $tinted-white-light;
+        }
+        &.active {
+          background: $white;
+        }
+      }
+    }
+
+    h4 {
+      @include tinted-white-bellefair-text(1rem);
+    }
+
+    h2 {
+      margin-bottom: 2.5vh;
+    }
+    .crew-member {
+      font-size: 0.9rem;
+    }
   }
 }
 

@@ -7,7 +7,7 @@ const Crew = () => {
   const activeCrewMember = crew[activeIndex];
   const { name, images, role, bio } = activeCrewMember;
   return (
-    <section className="crew">
+    <section className="crew-pg">
       <h1>
         <span>02</span> <span>Meet your crew</span>
       </h1>
@@ -20,26 +20,26 @@ const Crew = () => {
       <article>
         <nav>
           <button
-            className={`btn ${activeIndex === 0 ? "btn-active" : ""}`}
+            className={`btn ${activeIndex === 0 ? "active" : ""}`}
             onClick={() => setActiveIndex(0)}
           ></button>
           <button
-            className={`btn ${activeIndex === 1 ? "btn-active" : ""}`}
+            className={`btn ${activeIndex === 1 ? "active" : ""}`}
             onClick={() => setActiveIndex(1)}
           ></button>
           <button
-            className={`btn ${activeIndex === 2 ? "btn-active" : ""}`}
+            className={`btn ${activeIndex === 2 ? "active" : ""}`}
             onClick={() => setActiveIndex(2)}
           ></button>
           <button
-            className={`btn ${activeIndex === 3 ? "btn-active" : ""}`}
+            className={`btn ${activeIndex === 3 ? "active" : ""}`}
             onClick={() => setActiveIndex(3)}
           ></button>
         </nav>
 
         <div className="crew-member">
-          <h5>{role}</h5>
-          <h3>{name}</h3>
+          <h4>{role}</h4>
+          <h2>{name}</h2>
           <p>{bio}</p>
         </div>
       </article>
