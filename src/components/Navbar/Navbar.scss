@@ -94,7 +94,8 @@
     }
   }
   .link {
-    line-height: 3.5;
+    line-height: 2.5;
+    margin-bottom: 0.75rem;
 
     &.active {
       border-right: 4px solid $white;
@@ -132,9 +133,10 @@
 /*== TABLETS ONLY ==*/
 @media (min-width: 481px) and (max-width: 768px) {
   .navbar {
+    height: 12.5vh;
     .logo {
       top: 1rem;
-      left: 1rem;
+      left: 1.5rem;
     }
 
     .nav__links {

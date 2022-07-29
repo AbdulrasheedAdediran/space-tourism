@@ -6,9 +6,8 @@ const Destination = () => {
   const destinations = data.destinations;
   const activeDestination = destinations[activeIndex];
   const { name, images, description, distance, travel } = activeDestination;
-
   return (
-    <section className="destination">
+    <section className="destination-pg">
       <h1>
         <span>00</span> <span>Pick your destination</span>
       </h1>
