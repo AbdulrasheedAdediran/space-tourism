@@ -125,7 +125,7 @@
     padding: 0 10vw 0 10vw;
 
     h1 {
-      font-size: 1.75rem;
+      font-size: clamp(1rem, 10vw, 1.75rem);
     }
     .crew-wrapper {
       @include flex(center, space-between, row-reverse);

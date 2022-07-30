@@ -13,7 +13,6 @@
   h2,
   .btn {
     text-transform: uppercase;
-    margin-bottom: 3.5vh;
     font-weight: 400;
   }
   h1 {
@@ -22,21 +21,23 @@
   }
 
   article {
-    picture {
-      width: 100%;
-    }
-
     nav {
       @include flex(center, center);
       column-gap: 3.5vw;
 
       .btn {
+        @include white-bellefair-text();
         background: transparent;
         aspect-ratio: 1/1;
         width: 2.5rem;
         border-radius: 100%;
         color: $white;
         border: 1px solid $tinted-grey-dark;
+        transition: all 0.5s;
+
+        &:hover {
+          border: 1px solid $white;
+        }
 
         &.active {
           background: $white;
@@ -66,6 +67,14 @@
 
 /*== REGULAR MOBILE DEVICES ==*/
 @media (max-width: 480px) {
+  .technology-pg {
+    h1,
+    picture,
+    h2,
+    .btn {
+      margin-bottom: 3.5vh;
+    }
+  }
 }
 
 /*== TABLETS & DESKTOP DEVICES ==*/
@@ -78,18 +87,32 @@
     .btn {
       width: clamp(3rem, 10vw, 3.75rem);
     }
+
+    .technology-content {
+      h3 {
+        font-size: 1rem;
+      }
+    }
   }
 }
 
 /*== TABLETS ONLY ==*/
 @media (min-width: 481px) and (max-width: 768px) {
   .technology-pg {
+    h1,
+    picture,
+    h2,
+    .btn {
+      margin-bottom: 3.5vh;
+    }
+
+    .btn {
+      width: clamp(3.5rem, 10vw, 4rem);
+    }
     .technology-content {
-      h3 {
-        font-size: 1rem;
-      }
+      // width: 30vw;
       h2 {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 10vw, 2.5rem);
       }
       p {
         font-size: 1rem;
@@ -104,13 +127,49 @@
 @media (min-width: 769px) {
   .technology-pg {
     min-height: 85vh;
+    padding: 0 0 0 10vw;
+    width: 100%;
 
-    .technology-content {
-      h3 {
-      }
-      h2 {
-      }
-      p {
+    h1 {
+      font-size: clamp(1rem, 10vw, 1.75rem);
+    }
+    article {
+      @include flex(center, space-between, row-reverse);
+      // border: 2px solid yellow;
+      // position: relative;
+
+      .technology-wrapper {
+        @include flex(center, space-between, row);
+        column-gap: 4vw;
+        // border: 2px solid red;
+
+        .btn {
+          font-size: 2rem;
+          width: clamp(4rem, 5vh, 5rem);
+        }
+
+        picture {
+          position: absolute;
+          right: 0;
+        }
+
+        nav {
+          @include flex(center, space-between, column);
+          row-gap: 3.5vh;
+        }
+        .technology-content {
+          text-align: left;
+          h3 {
+            font-size: 1rem;
+          }
+          h2 {
+            font-size: clamp(3rem, 15vw, 3.5rem);
+          }
+          p {
+            font-size: 1.125rem;
+            max-width: 30vw;
+          }
+        }
       }
     }
   }
