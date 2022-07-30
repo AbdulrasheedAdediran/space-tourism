@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import Homepage from "./pages/homepage/Homepage";
 import "./App.scss";
 import Crew from "./pages/crew/Crew";
-import Technology from "./pages/Technology/Technology";
+import Technology from "./pages/technology/Technology";
 import Destination from "./pages/destination/Destination";
 import SharedLayout from "./pages/SharedLayout";
 import Error from "./pages/Error";

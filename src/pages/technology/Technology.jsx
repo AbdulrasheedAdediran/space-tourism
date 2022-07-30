@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import data from "../../../data.json";
 import "./Technology.scss";
 
@@ -9,7 +10,13 @@ const Technology = () => {
   const { name, images, description } = activeTech;
 
   return (
-    <section className="technology-pg">
+    <motion.section
+      className="technology-pg"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <h1>
         <span>03</span> <span>Space launch 101</span>
       </h1>
@@ -64,7 +71,7 @@ const Technology = () => {
           </div>
         </div>
       </article>
-    </section>
+    </motion.section>
   );
 };
 

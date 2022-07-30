@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import data from "../../../data.json";
 import "./Crew.scss";
 const Crew = () => {
@@ -7,7 +8,13 @@ const Crew = () => {
   const activeCrewMember = crew[activeIndex];
   const { name, images, role, bio } = activeCrewMember;
   return (
-    <section className="crew-pg">
+    <motion.section
+      className="crew-pg"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <h1>
         <span>02</span> <span>Meet your crew</span>
       </h1>
@@ -44,7 +51,7 @@ const Crew = () => {
           </div>
         </article>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

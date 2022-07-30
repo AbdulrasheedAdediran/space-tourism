@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import data from "../../../data.json";
 import "./Destination.scss";
 const Destination = () => {
@@ -7,7 +8,13 @@ const Destination = () => {
   const activeDestination = destinations[activeIndex];
   const { name, images, description, distance, travel } = activeDestination;
   return (
-    <section className="destination-pg">
+    <motion.section
+      className="destination-pg"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <h1>
         <span>00</span> <span>Pick your destination</span>
       </h1>
@@ -64,7 +71,7 @@ const Destination = () => {
           </div>
         </div>
       </article>
-    </section>
+    </motion.section>
   );
 };
 
