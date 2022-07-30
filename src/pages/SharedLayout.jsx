@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "../components/navbar/Navbar.jsx";
 const SharedLayout = () => {
   return (
     <div>
