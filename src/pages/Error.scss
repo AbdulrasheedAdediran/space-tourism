@@ -1,0 +1,13 @@
+@use "scss/abstracts/variables" as *;
+@use "scss/abstracts/mixins" as *;
+
+.error {
+  text-align: center;
+  @include flex(center, center, column);
+
+  h1,
+  h2 {
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-weight: 400;
+  }
+}
