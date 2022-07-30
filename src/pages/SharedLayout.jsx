@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Navbar from "../components/navbar/Navbar";
 const SharedLayout = () => {
   return (
-    <>
+    <div>
       <Navbar />
       <motion.section
         initial={{ opacity: 0 }}
@@ -13,7 +13,7 @@ const SharedLayout = () => {
       >
         <Outlet />
       </motion.section>
-    </>
+    </div>
   );
 };
 
