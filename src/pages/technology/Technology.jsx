@@ -7,8 +7,13 @@ const Technology = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const technology = data.technology;
   const activeTech = technology[activeIndex];
-  const { name, images, description } = activeTech;
-
+  const {
+    name,
+    images: { landscape, portrait },
+    description,
+  } = activeTech;
+  const landscapeImage = `../../.${landscape}`;
+  const portraitImage = `../../.${portrait}`;
   return (
     <motion.section
       className="technology-pg"
@@ -26,13 +31,13 @@ const Technology = () => {
           <source
             media="(max-width:768px)"
             type="image/jpeg"
-            srcSet={`../../../${images.landscape}`}
+            srcSet={landscapeImage}
             alt={`Image of ${name}`}
           />
           <source
             media="(min-width:769px)"
             type="image/jpeg"
-            srcSet={`../../../${images.portrait}`}
+            srcSet={portraitImage}
             alt={`Image of ${name}`}
           />
 

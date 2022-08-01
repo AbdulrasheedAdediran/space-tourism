@@ -6,7 +6,14 @@ const Crew = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const crew = data.crew;
   const activeCrewMember = crew[activeIndex];
-  const { name, images, role, bio } = activeCrewMember;
+  const {
+    name,
+    images: { webp, png },
+    role,
+    bio,
+  } = activeCrewMember;
+  const webpImage = `../../.${webp}`;
+  const pngImage = `../../.${png}`;
   return (
     <motion.section
       className="crew-pg"
@@ -20,11 +27,8 @@ const Crew = () => {
       </h1>
       <div className="crew-wrapper">
         <picture>
-          <source type="image/webp" srcSet={`../../../${images.webp}`} />
-          <img
-            src={`../../../${images.png}`}
-            alt={`Picture of ${name}, a crew member`}
-          />
+          <source type="image/webp" srcSet={webpImage} />
+          <img src={pngImage} alt={`Picture of ${name}, a crew member`} />
         </picture>
 
         <article>

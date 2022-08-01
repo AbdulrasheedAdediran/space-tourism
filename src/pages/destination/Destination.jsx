@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
-// import images from "../../../"
 import "./Destination.scss";
 const Destination = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const destinations = data.destinations;
   const activeDestination = destinations[activeIndex];
-  const { name, images, description, distance, travel } = activeDestination;
+  const {
+    name,
+    images: { webp, png },
+    description,
+    distance,
+    travel,
+  } = activeDestination;
+  const webpImage = `../../.${webp}`;
+  const pngImage = `../../.${png}`;
 
-  console.log(images);
-  console.log(images.webp);
-  console.log(images.png);
   return (
     <motion.section
       className="destination-pg"
@@ -26,11 +30,8 @@ const Destination = () => {
 
       <article>
         <picture>
-          <source type="image/webp" srcSet={`../../../${images.webp}`} />
-          <img
-            src={`../../../${images.png}`}
-            alt={`Pictoral illustration of ${name}`}
-          />
+          <source type="image/webp" srcSet={webpImage} />
+          <img src={pngImage} alt={`Pictoral illustration of ${name}`} />
         </picture>
 
         <div className="destination-content">
