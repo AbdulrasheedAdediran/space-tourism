@@ -26,13 +26,13 @@ const Technology = () => {
           <source
             media="(max-width:768px)"
             type="image/jpeg"
-            srcSet={images.landscape}
+            srcSet={`../../../${images.landscape}`}
             alt={`Image of ${name}`}
           />
           <source
             media="(min-width:769px)"
             type="image/jpeg"
-            srcSet={images.portrait}
+            srcSet={`../../../${images.portrait}`}
             alt={`Image of ${name}`}
           />
 

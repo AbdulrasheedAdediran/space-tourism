@@ -4,6 +4,7 @@
 .error {
   text-align: center;
   @include flex(center, center, column);
+  height: 100vh;
 
   h1,
   h2 {

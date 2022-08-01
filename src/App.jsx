@@ -9,8 +9,6 @@ import Destination from "./pages/destination/Destination";
 import SharedLayout from "./pages/SharedLayout";
 import Error from "./pages/Error";
 
-// import image from
-
 const App = () => {
   const [activePage, setActivePage] = useState("");
   const location = useLocation();
