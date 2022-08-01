@@ -17,6 +17,8 @@ const Destination = () => {
   const webpImage = `../../.${webp}`;
   const pngImage = `../../.${png}`;
 
+  console.log(webp);
+  console.log(png);
   console.log(webpImage);
   console.log(pngImage);
   console.log(webpMars);
