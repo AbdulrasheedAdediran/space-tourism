@@ -1,3 +1,4 @@
+/* global require */
 import { useState } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";

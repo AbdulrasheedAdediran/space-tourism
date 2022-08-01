@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
+import assets from "../../../assets";
 import "./Crew.scss";
 const Crew = () => {
   const [activeIndex, setActiveIndex] = useState(0);
