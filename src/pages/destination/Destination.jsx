@@ -32,13 +32,15 @@ const Destination = () => {
       <h1>
         <span>00</span> <span>Pick your destination</span>
       </h1>
-      {/* <img src={webpMars} alt="Image of Mars" /> */}
+
       <article>
         <picture>
           <source type="image/webp" srcSet={webpImage} />
           <img src={webpMars} alt={`Pictoral illustration of ${name}`} />
         </picture>
-
+        <img src={webpMars} alt="Image of Mars" />
+        <img src={webp} alt="Image of Mars" />
+        <img src={png} alt="Image of Mars" />
         <div className="destination-content">
           <nav>
             <button
