@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
+import webpMars from "../../../assets/destination/image-mars.webp";
 import "./Destination.scss";
 const Destination = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -16,6 +17,10 @@ const Destination = () => {
   const webpImage = `../../.${webp}`;
   const pngImage = `../../.${png}`;
 
+  console.log(webpImage);
+  console.log(pngImage);
+  console.log(webpMars);
+
   return (
     <motion.section
       className="destination-pg"
@@ -27,11 +32,11 @@ const Destination = () => {
       <h1>
         <span>00</span> <span>Pick your destination</span>
       </h1>
-
+      {/* <img src={webpMars} alt="Image of Mars" /> */}
       <article>
         <picture>
           <source type="image/webp" srcSet={webpImage} />
-          <img src={pngImage} alt={`Pictoral illustration of ${name}`} />
+          <img src={webpMars} alt={`Pictoral illustration of ${name}`} />
         </picture>
 
         <div className="destination-content">
