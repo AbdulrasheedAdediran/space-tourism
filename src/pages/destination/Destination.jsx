@@ -39,8 +39,10 @@ const Destination = () => {
           <img src={webpMars} alt={`Pictoral illustration of ${name}`} />
         </picture>
         <img src={webpMars} alt="Image of Mars" />
-        <img src={webp} alt="Image of Mars" />
-        <img src={png} alt="Image of Mars" />
+        <img src={webp} alt="Image of webp" />
+        <img src={png} alt="Image of png" />
+        <img src={webpImage} alt="Image of webpImage" />
+        <img src={pngImage} alt="Image of pngImage" />
         <div className="destination-content">
           <nav>
             <button
