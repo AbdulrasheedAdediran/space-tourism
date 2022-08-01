@@ -21,7 +21,7 @@ const Crew = () => {
       <div className="crew-wrapper">
         <picture>
           <source type="image/webp" srcSet={images.webp} />
-          <img src={images.png} alt={`Pictore of ${name}, a crew member`} />
+          <img src={images.png} alt={`Picture of ${name}, a crew member`} />
         </picture>
 
         <article>
