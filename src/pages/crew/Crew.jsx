@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
-import assets from "../../../assets";
 import "./Crew.scss";
 const Crew = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -13,8 +12,7 @@ const Crew = () => {
     role,
     bio,
   } = activeCrewMember;
-  const webpImage = `../../.${webp}`;
-  const pngImage = `../../.${png}`;
+
   return (
     <motion.section
       className="crew-pg"
@@ -28,8 +26,8 @@ const Crew = () => {
       </h1>
       <div className="crew-wrapper">
         <picture>
-          <source type="image/webp" srcSet={webpImage} />
-          <img src={pngImage} alt={`Picture of ${name}, a crew member`} />
+          <source type="image/webp" srcSet={webp} />
+          <img src={png} alt={`Picture of ${name}, a crew member`} />
         </picture>
 
         <article>

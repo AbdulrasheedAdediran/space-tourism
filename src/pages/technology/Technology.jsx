@@ -12,8 +12,7 @@ const Technology = () => {
     images: { landscape, portrait },
     description,
   } = activeTech;
-  const landscapeImage = `../../.${landscape}`;
-  const portraitImage = `../../.${portrait}`;
+
   return (
     <motion.section
       className="technology-pg"
@@ -31,21 +30,17 @@ const Technology = () => {
           <source
             media="(max-width:768px)"
             type="image/jpeg"
-            srcSet={landscapeImage}
+            srcSet={landscape}
             alt={`Image of ${name}`}
           />
           <source
             media="(min-width:769px)"
             type="image/jpeg"
-            srcSet={portraitImage}
+            srcSet={portrait}
             alt={`Image of ${name}`}
           />
 
-          <img
-            src={images.portrait}
-            className="portrait"
-            alt={`Image of ${name}`}
-          />
+          <img src={portrait} className="portrait" alt={`Image of ${name}`} />
         </picture>
 
         <div className="technology-wrapper">

@@ -2,7 +2,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
-// import webpMars from "../../../assets/destination/image-mars.webp";
+import webpMoon from "../../../assets/destination/image-mars.webp";
+import pngMoon from "../../../assets/destination/image-mars.webp";
+import webpMars from "../../../assets/destination/image-mars.webp";
+import pngMars from "../../../assets/destination/image-mars.webp";
+import webpEuropa from "../../../assets/destination/image-mars.webp";
+import pngEuropa from "../../../assets/destination/image-mars.webp";
+import webpTitan from "../../../assets/destination/image-mars.webp";
+import pngTitan from "../../../assets/destination/image-mars.webp";
 import "./Destination.scss";
 const Destination = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -15,14 +22,6 @@ const Destination = () => {
     distance,
     travel,
   } = activeDestination;
-  const webpImage = `../../.${webp}`;
-  const pngImage = `../../.${png}`;
-
-  // console.log(webp);
-  // console.log(png);
-  // console.log(webpImage);
-  // console.log(pngImage);
-  // console.log(webpMars);
 
   return (
     <motion.section
@@ -38,17 +37,10 @@ const Destination = () => {
 
       <article>
         <picture>
-          <source type="image/webp" srcSet={require({ webpImage }).default} />
-          <img
-            src={require(webpMars).default}
-            alt={`Pictoral illustration of ${name}`}
-          />
+          <source type="image/webp" srcSet={webp} />
+          <img src={png} alt={`Pictoral illustration of ${name}`} />
         </picture>
-        {/* <img src={webpMars} alt="Image of Mars" />
-        <img src={webp} alt="Image of webp" />
-        <img src={png} alt="Image of png" />
-        <img src={webpImage} alt="Image of webpImage" />
-        <img src={pngImage} alt="Image of pngImage" /> */}
+
         <div className="destination-content">
           <nav>
             <button
