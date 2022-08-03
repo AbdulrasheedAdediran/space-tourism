@@ -2,14 +2,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
-import webpMoon from "../../../assets/destination/image-mars.webp";
-import pngMoon from "../../../assets/destination/image-mars.webp";
+import webpMoon from "../../../assets/destination/image-moon.webp";
+import pngMoon from "../../../assets/destination/image-moon.webp";
 import webpMars from "../../../assets/destination/image-mars.webp";
 import pngMars from "../../../assets/destination/image-mars.webp";
-import webpEuropa from "../../../assets/destination/image-mars.webp";
-import pngEuropa from "../../../assets/destination/image-mars.webp";
-import webpTitan from "../../../assets/destination/image-mars.webp";
-import pngTitan from "../../../assets/destination/image-mars.webp";
+import webpEuropa from "../../../assets/destination/image-europa.webp";
+import pngEuropa from "../../../assets/destination/image-europa.webp";
+import webpTitan from "../../../assets/destination/image-titan.webp";
+import pngTitan from "../../../assets/destination/image-titan.webp";
 import "./Destination.scss";
 const Destination = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,7 +22,13 @@ const Destination = () => {
     distance,
     travel,
   } = activeDestination;
+  const webpImages = [webpMoon, webpMars, webpEuropa, webpTitan];
+  const pngImages = [pngMoon, pngMars, pngEuropa, pngTitan];
+  const activeWebpImage = webpImages[activeIndex];
+  const activePngImage = pngImages[activeIndex];
 
+  // console.log(webpImages[activeIndex]);
+  // console.log(pngImages[activeIndex]);
   return (
     <motion.section
       className="destination-pg"
@@ -37,8 +43,8 @@ const Destination = () => {
 
       <article>
         <picture>
-          <source type="image/webp" srcSet={webp} />
-          <img src={png} alt={`Pictoral illustration of ${name}`} />
+          <source type="image/webp" srcSet={activeWebpImage} />
+          <img src={activePngImage} alt={name} />
         </picture>
 
         <div className="destination-content">
