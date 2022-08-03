@@ -2,10 +2,11 @@
 @use "scss/abstracts/mixins" as *;
 
 .technology-pg {
-  min-height: 87.5vh;
+  height: 87.5vh;
   display: block;
   // border: 1px solid red;
   text-align: center;
+  overflow-y: hidden;
 
   h1,
   picture,
