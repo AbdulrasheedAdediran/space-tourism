@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
+import launchVehicleLandscape from "../../../assets/technology/image-launch-vehicle-landscape.jpg";
+import launchVehiclePortrait from "../../../assets/technology/image-launch-vehicle-portrait.jpg";
+import spaceSportLandscape from "../../../assets/technology/image-spaceport-landscape.jpg";
+import spaceSportPortrait from "../../../assets/technology/image-spaceport-portrait.jpg";
+import spaceCapsuleLandscape from "../../../assets/technology/image-space-capsule-landscape.jpg";
+import spaceCapsulePortrait from "../../../assets/technology/image-space-capsule-portrait.jpg";
 import "./Technology.scss";
 
 const Technology = () => {
@@ -9,10 +15,21 @@ const Technology = () => {
   const activeTech = technology[activeIndex];
   const {
     name,
-    images: { landscape, portrait },
+    // images: { landscape, portrait },
     description,
   } = activeTech;
-
+  const landscapeImages = [
+    launchVehicleLandscape,
+    spaceSportLandscape,
+    spaceCapsuleLandscape,
+  ];
+  const portraitImages = [
+    launchVehiclePortrait,
+    spaceSportPortrait,
+    spaceCapsulePortrait,
+  ];
+  const activeLandscapeImage = landscapeImages[activeIndex];
+  const activePortraitImage = portraitImages[activeIndex];
   return (
     <motion.section
       className="technology-pg"
@@ -30,17 +47,17 @@ const Technology = () => {
           <source
             media="(max-width:768px)"
             type="image/jpeg"
-            srcSet={landscape}
-            alt={`Image of ${name}`}
+            srcSet={activeLandscapeImage}
+            alt={name}
           />
           <source
             media="(min-width:769px)"
             type="image/jpeg"
-            srcSet={portrait}
-            alt={`Image of ${name}`}
+            srcSet={activePortraitImage}
+            alt={name}
           />
 
-          <img src={portrait} className="portrait" alt={`Image of ${name}`} />
+          <img src={activePortraitImage} className="portrait" alt={name} />
         </picture>
 
         <div className="technology-wrapper">

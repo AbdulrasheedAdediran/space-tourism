@@ -3,10 +3,11 @@
 
 .crew-pg {
   // border: 1px solid blue;
-  min-height: 85vh;
+  height: 85vh;
   display: block;
   padding-inline: 1rem;
   text-align: center;
+  overflow-y: hidden;
 
   h1,
   h2,

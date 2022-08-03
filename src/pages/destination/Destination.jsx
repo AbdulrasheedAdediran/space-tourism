@@ -17,7 +17,7 @@ const Destination = () => {
   const activeDestination = destinations[activeIndex];
   const {
     name,
-    images: { webp, png },
+    // images: { webp, png },
     description,
     distance,
     travel,
@@ -27,8 +27,6 @@ const Destination = () => {
   const activeWebpImage = webpImages[activeIndex];
   const activePngImage = pngImages[activeIndex];
 
-  // console.log(webpImages[activeIndex]);
-  // console.log(pngImages[activeIndex]);
   return (
     <motion.section
       className="destination-pg"

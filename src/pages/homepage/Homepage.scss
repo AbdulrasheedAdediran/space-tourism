@@ -5,6 +5,7 @@
   @include flex(center, space-between, column);
   height: 85vh;
   padding-bottom: 10vh;
+  overflow-y: hidden;
 
   .home-content {
     text-align: center;

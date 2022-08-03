@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
+import pngDouglas from "../../../assets/crew/image-douglas-hurley.png";
+import webpDouglas from "../../../assets/crew/image-douglas-hurley.webp";
+import pngMark from "../../../assets/crew/image-mark-shuttleworth.png";
+import webpMark from "../../../assets/crew/image-mark-shuttleworth.webp";
+import pngVictor from "../../../assets/crew/image-victor-glover.png";
+import webpVictor from "../../../assets/crew/image-victor-glover.webp";
+import pngAnousheh from "../../../assets/crew/image-anousheh-ansari.png";
+import webpAnousheh from "../../../assets/crew/image-anousheh-ansari.webp";
 import "./Crew.scss";
 const Crew = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -8,11 +16,14 @@ const Crew = () => {
   const activeCrewMember = crew[activeIndex];
   const {
     name,
-    images: { webp, png },
+    // images: { webp, png },
     role,
     bio,
   } = activeCrewMember;
-
+  const pngImages = [pngDouglas, pngMark, pngVictor, pngAnousheh];
+  const webpImages = [webpDouglas, webpMark, webpVictor, webpAnousheh];
+  const activePngImage = pngImages[activeIndex];
+  const activeWebpImage = webpImages[activeIndex];
   return (
     <motion.section
       className="crew-pg"
@@ -26,8 +37,8 @@ const Crew = () => {
       </h1>
       <div className="crew-wrapper">
         <picture>
-          <source type="image/webp" srcSet={webp} />
-          <img src={png} alt={`Picture of ${name}, a crew member`} />
+          <source type="image/webp" srcSet={activeWebpImage} />
+          <img src={activePngImage} alt={`${name}, a crew member`} />
         </picture>
 
         <article>
