@@ -49,7 +49,11 @@ const Navbar = () => {
         </NavLink>
       </nav>
 
-      <button className="menu-btn" onClick={toggleMenu}>
+      <button
+        aria-label="menu button"
+        className="menu-btn"
+        onClick={toggleMenu}
+      >
         <img
           src={menuIcon}
           alt=""
