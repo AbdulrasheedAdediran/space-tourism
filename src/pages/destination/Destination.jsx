@@ -1,5 +1,5 @@
 /* global require */
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
 import webpMoon from "../../../assets/destination/image-moon.webp";
@@ -26,6 +26,24 @@ const Destination = () => {
   const pngImages = [pngMoon, pngMars, pngEuropa, pngTitan];
   const activeWebpImage = webpImages[activeIndex];
   const activePngImage = pngImages[activeIndex];
+  const destRef = useRef();
+
+  // useEffect(() => {
+  //   const listener = () => {
+      
+  //     destRef.current.addEventListener("click", () => {
+  //       console.log("Clicked Destination")
+  //     })
+  //   } 
+  // listener()
+  //   return () => {
+  //     destRef.current.removeEventListener("click", () => {
+  //       console.log("Clicked Destination")
+
+  //     })
+  //   }
+  // }, [])
+  
 
   return (
     <motion.section
@@ -39,7 +57,7 @@ const Destination = () => {
         <span>00</span> <span>Pick your destination</span>
       </h1>
 
-      <article>
+      <article ref={destRef}>
         <picture>
           <source type="image/webp" srcSet={activeWebpImage} />
           <img src={activePngImage} alt={name} />
