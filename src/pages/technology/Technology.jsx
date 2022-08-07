@@ -31,12 +31,9 @@ const Technology = () => {
   const activeLandscapeImage = landscapeImages[activeIndex];
   const activePortraitImage = portraitImages[activeIndex];
   return (
-    <motion.section
+    <section
       className="technology-pg"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      
     >
       <h1>
         <span>03</span> <span>Space launch 101</span>
@@ -88,7 +85,7 @@ const Technology = () => {
           </div>
         </div>
       </article>
-    </motion.section>
+    </section>
   );
 };
 

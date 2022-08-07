@@ -25,12 +25,9 @@ const Crew = () => {
   const activePngImage = pngImages[activeIndex];
   const activeWebpImage = webpImages[activeIndex];
   return (
-    <motion.section
+    <section
       className="crew-pg"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      
     >
       <h1>
         <span>02</span> <span>Meet your crew</span>
@@ -68,7 +65,7 @@ const Crew = () => {
           </div>
         </article>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

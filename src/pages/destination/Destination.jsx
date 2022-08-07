@@ -1,6 +1,6 @@
 /* global require */
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import data from "../../../data.json";
 import webpMoon from "../../../assets/destination/image-moon.webp";
 import pngMoon from "../../../assets/destination/image-moon.webp";
@@ -46,12 +46,9 @@ const Destination = () => {
   
 
   return (
-    <motion.section
+    <section
       className="destination-pg"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+     
     >
       <h1>
         <span>00</span> <span>Pick your destination</span>
@@ -109,7 +106,7 @@ const Destination = () => {
           </div>
         </div>
       </article>
-    </motion.section>
+    </section>
   );
 };
 
