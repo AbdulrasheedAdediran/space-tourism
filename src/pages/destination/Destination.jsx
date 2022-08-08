@@ -28,21 +28,7 @@ const Destination = () => {
   const activePngImage = pngImages[activeIndex];
   const destRef = useRef();
 
-  // useEffect(() => {
-  //   const listener = () => {
-      
-  //     destRef.current.addEventListener("click", () => {
-  //       console.log("Clicked Destination")
-  //     })
-  //   } 
-  // listener()
-  //   return () => {
-  //     destRef.current.removeEventListener("click", () => {
-  //       console.log("Clicked Destination")
-
-  //     })
-  //   }
-  // }, [])
+ 
   
 
   return (
