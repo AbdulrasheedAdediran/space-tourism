@@ -1,5 +1,4 @@
-/* global require */
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect,  } from "react";
 // import { motion } from "framer-motion";
 import data from "../../../data.json";
 import webpMoon from "../../../assets/destination/image-moon.webp";
@@ -26,9 +25,58 @@ const Destination = () => {
   const pngImages = [pngMoon, pngMars, pngEuropa, pngTitan];
   const activeWebpImage = webpImages[activeIndex];
   const activePngImage = pngImages[activeIndex];
-  const destRef = useRef();
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
+  const minSwipeDistance = 50;
 
- 
+  
+  const handleTouchStart = (e) => {
+    setTouchEnd(null)
+    console.log(`TouchStart e.targetTouches: ${e.targetTouches[0].clientX}`)
+    setTouchStart(e.targetTouches[0].clientX);
+  }
+
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+    // console.log(`TouchMove e.targetTouches: ${e.targetTouches[0].clientX}`)
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+      const distance = touchStart - touchEnd;
+      const isLeftSwipe = distance > minSwipeDistance
+      const isRightSwipe = distance < minSwipeDistance
+      // if (isLeftSwipe || isRightSwipe) {
+
+    console.log(`Distance: ${distance}`)
+    console.log(`Left swipe: ${isLeftSwipe}`)
+    console.log(`Right swipe: ${isRightSwipe}`)
+      console.log(`destinations.length ${destinations.length}`)
+      console.log(`Active index + 1: ${activeIndex + 1 % destinations.length}`)
+      console.log(`Active index - 1: ${activeIndex - 1 % destinations.length}`)
+      console.log(`Swiped ${isLeftSwipe ? "Left" : "Right"}`)
+        isLeftSwipe && setActiveIndex((activeIndex + 1) % destinations.length)
+      isRightSwipe && setActiveIndex((activeIndex - 1 + destinations.length) % destinations.length)
+    
+  // }
+}
+
+  // useEffect(() => {
+  //   const listener = () => {
+      
+  //     destRef.current.addEventListener("click", () => {
+  //       console.log("Clicked Destination")
+  //     })
+  //   } 
+  // listener()
+  //   return () => {
+  //     destRef.current.removeEventListener("click", () => {
+  //       console.log("Clicked Destination")
+
+  //     })
+  //   }
+  // }, [])
   
 
   return (
@@ -40,7 +88,11 @@ const Destination = () => {
         <span>00</span> <span>Pick your destination</span>
       </h1>
 
-      <article ref={destRef}>
+      <article
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <picture>
           <source type="image/webp" srcSet={activeWebpImage} />
           <img src={activePngImage} alt={name} />
