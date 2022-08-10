@@ -24,10 +24,35 @@ const Crew = () => {
   const webpImages = [webpDouglas, webpMark, webpVictor, webpAnousheh];
   const activePngImage = pngImages[activeIndex];
   const activeWebpImage = webpImages[activeIndex];
+ const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
+  const minSwipeDistance = 50;
+
+  
+  const handleTouchStart = (e) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX);
+  }
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+      const distance = touchStart - touchEnd;
+      const isLeftSwipe = distance > minSwipeDistance
+      const isRightSwipe = distance < minSwipeDistance
+      isLeftSwipe && setActiveIndex((activeIndex + 1) % crew.length)
+      isRightSwipe && setActiveIndex((activeIndex - 1 + crew.length) % crew.length)
+}
+
   return (
     <section
       className="crew-pg"
-      
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
     >
       <h1>
         <span>02</span> <span>Meet your crew</span>

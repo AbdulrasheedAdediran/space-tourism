@@ -51,16 +51,15 @@ const Destination = () => {
   return (
     <section
       className="destination-pg"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
     >
       <h1>
         <span>00</span> <span>Pick your destination</span>
       </h1>
 
-      <article
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
+      <article>
         <picture>
           <source type="image/webp" srcSet={activeWebpImage} />
           <img src={activePngImage} alt={name} />
