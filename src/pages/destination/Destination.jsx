@@ -43,7 +43,7 @@ const Destination = () => {
     if (!touchStart || !touchEnd) return;
       const distance = touchStart - touchEnd;
       const isLeftSwipe = distance > minSwipeDistance
-      const isRightSwipe = distance < minSwipeDistance
+      const isRightSwipe = distance < -minSwipeDistance
       isLeftSwipe && setActiveIndex((activeIndex + 1) % destinations.length)
       isRightSwipe && setActiveIndex((activeIndex - 1 + destinations.length) % destinations.length)
 }
