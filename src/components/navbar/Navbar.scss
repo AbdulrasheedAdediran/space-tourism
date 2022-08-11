@@ -22,6 +22,23 @@
     // border: 2px solid red;
   }
 
+.overlay{
+  // border: 2px solid red;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background-color: $black;
+  opacity: 0.25;
+  transition: opacity 0.5s ease-in-out;
+  display: none;
+
+  &.show{
+  display: block;
+  }
+}
+
+
   .menu-btn {
     width: clamp(1.5rem, 10vw, 2rem);
     aspect-ratio: 1/1;
@@ -41,6 +58,9 @@
   .nav__links {
     @include flex(flex-start, flex-start, column);
     background-color: $tinted-black-dark;
+      backdrop-filter: blur(2.5rem);
+      -webkit-backdrop-filter: blur(2.5rem);
+
     // border: 2px solid red;
   }
 
@@ -48,6 +68,7 @@
     .nav__links {
       background-color: $tinted-white-dark;
       backdrop-filter: blur(2.5rem);
+      -webkit-backdrop-filter: blur(2.5rem);
     }
   }
 

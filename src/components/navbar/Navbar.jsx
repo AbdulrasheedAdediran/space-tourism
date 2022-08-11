@@ -9,7 +9,14 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  if (isOpen && typeof window !== "undefined" && window.document) {
+    document.body.style.overflowY = "hidden"
+  } else  {
+    document.body.style.overflowY = "unset"  
+}
+  console.log(isOpen)
 
+    
   return (
     <section className="navbar">
       <div className="logo">
@@ -17,6 +24,8 @@ const Navbar = () => {
           <img src={logo} alt="Space tourism logo" />
         </Link>
       </div>
+
+      <div className={`overlay ${isOpen ? "show" : ""}`} onClick={toggleMenu}></div>
 
       <nav className={`nav__links ${isOpen ? "show" : ""}`}>
         <NavLink
