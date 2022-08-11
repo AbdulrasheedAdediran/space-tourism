@@ -58,13 +58,11 @@
   .nav__links {
     @include flex(flex-start, flex-start, column);
     background-color: $tinted-black-dark;
-      backdrop-filter: blur(2.5rem);
-      -webkit-backdrop-filter: blur(2.5rem);
 
     // border: 2px solid red;
   }
 
-  @supports (backdrop-filter: blur(2.5rem)) {
+  @supports (-webkit-backdrop-filter: blur(2.5rem)) {
     .nav__links {
       background-color: $tinted-white-dark;
       backdrop-filter: blur(2.5rem);

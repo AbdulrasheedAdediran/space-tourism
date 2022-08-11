@@ -27,7 +27,7 @@ const Destination = () => {
   const activePngImage = pngImages[activeIndex];
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
-  const minSwipeDistance = 100;
+  const minSwipeDistance = 75;
 
   
   const handleTouchStart = (e) => {
