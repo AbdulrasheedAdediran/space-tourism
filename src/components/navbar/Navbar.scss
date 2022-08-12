@@ -4,6 +4,7 @@
 .navbar {
   @include flex();
   height: 15vh;
+  position: relative;
   // border: 2px solid red;
 
   img {
@@ -30,7 +31,7 @@
   z-index: 10;
   background-color: $black;
   opacity: 0.25;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
   display: none;
 
   &.show{
@@ -58,17 +59,17 @@
   .nav__links {
     @include flex(flex-start, flex-start, column);
     background-color: $tinted-black-dark;
-
     // border: 2px solid red;
   }
 
-  @supports (-webkit-backdrop-filter: blur(2.5rem)) {
+  @supports (backdrop-filter: blur(2.5rem)) or (-webkit-backdrop-filter: blur(2.5rem)) {
     .nav__links {
       background-color: $tinted-white-dark;
       backdrop-filter: blur(2.5rem);
       -webkit-backdrop-filter: blur(2.5rem);
     }
   }
+
 
   .link {
     @include white-barlow-condensed-text();

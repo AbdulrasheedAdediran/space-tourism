@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../../assets/shared/logo.svg";
 import closeIcon from "../../../assets/shared/icon-close.svg";
@@ -13,12 +13,39 @@ const Navbar = () => {
     document.body.style.overflowY = "hidden"
   } else  {
     document.body.style.overflowY = "unset"  
-}
-  console.log(isOpen)
+  }
+  const navRef = useRef();
+  let lastScrollTop;
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navRef.current.style.top = "-10%"
+      } else {
+        navRef.current.style.top = "0"
+      }
+      lastScrollTop = scrollTop;
+    })
+// console.log(navRef.current)
+    // listener()
+  
+    return () => {
+      window.removeEventListener("scroll", () => {
+      const scrollTop = document.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navRef.current.style.top = "-10%"
+      } else {
+        navRef.current.style.top = "0"
+      }
+      lastScrollTop = scrollTop;
+    })
+    }
+  }, [lastScrollTop])
+  
 
     
   return (
-    <section className="navbar">
+    <section className="navbar" ref={navRef}>
       <div className="logo">
         <Link to="/">
           <img src={logo} alt="Space tourism logo" />
