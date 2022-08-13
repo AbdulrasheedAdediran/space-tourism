@@ -17,28 +17,21 @@ const Navbar = () => {
   const navRef = useRef();
   let lastScrollTop;
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const scrollTop = document.scrollY || document.documentElement.scrollTop;
+    const scrollListener = () => {
+      if (typeof window !== "undefined" && window.document) {
+        const scrollTop = document.scrollY || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
-        navRef.current.style.top = "-10%"
+        navRef.current.style.top = "-30%"
       } else {
         navRef.current.style.top = "0"
       }
       lastScrollTop = scrollTop;
-    })
-// console.log(navRef.current)
-    // listener()
+     }
+    }
+    window.addEventListener("scroll", scrollListener)
   
     return () => {
-      window.removeEventListener("scroll", () => {
-      const scrollTop = document.scrollY || document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop) {
-        navRef.current.style.top = "-10%"
-      } else {
-        navRef.current.style.top = "0"
-      }
-      lastScrollTop = scrollTop;
-    })
+      window.removeEventListener("scroll", scrollListener)
     }
   }, [lastScrollTop])
   

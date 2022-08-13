@@ -3,8 +3,11 @@
 
 .homepage {
   @include flex(center, space-between, column);
-  height: 85vh;
+  min-height: 85vh;
+  height: 100%;
   padding-bottom: 10vh;
+  position: relative;
+  top: 15vh;
   // overflow: hidden;
 
   .home-content {
@@ -88,6 +91,8 @@
 /*== REGULAR MOBILE DEVICES ==*/
 @media (max-width: 480px) {
   .homepage {
+    min-height: 87.5vh;
+    top: 12.5vh;
     padding-bottom: 7.5vh;
     padding-inline: 1.5rem;
   }
@@ -96,6 +101,9 @@
 /*== TABLETS ONLY ==*/
 @media (min-width: 481px) and (max-width: 768px) {
   .homepage {
+    min-height: 87.5vh;
+    top: 12.5vh;
+
     .home-content {
       max-width: 60vw;
       // border: 1px solid red;
@@ -124,7 +132,8 @@
   .homepage {
     padding-left: 7rem;
     @include flex(flex-end, space-between, row);
-    height: 85vh;
+    // height: 85vh;
+    // min-height: 100vh;
     padding: 0 10vw 15vh 10vw;
 
     .home-content {

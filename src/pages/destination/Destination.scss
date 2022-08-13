@@ -5,6 +5,8 @@
   display: block;
   text-align: center;
   padding-inline: 1rem;
+  position: relative;
+  top: 12.5vh;
 
   h1,
   h2,
@@ -13,9 +15,11 @@
     font-weight: 400;
     text-transform: uppercase;
   }
+
   h1 {
     @include page-heading-1();
   }
+  
   picture {
     aspect-ratio: 1;
     width: clamp(8.25rem, 45vw, 14.5rem);

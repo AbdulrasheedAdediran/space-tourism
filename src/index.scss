@@ -40,24 +40,25 @@ h6 {
   color: $white;
 }
 
-html {
+html, body {
   font-size: 16px;
-  width: 100%;
   max-width: 1440px;
+  width: 100%;
+  height: 100%;
 }
 body {
-  font-size: 16px;
   font-weight: normal;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: $barlow;
   color: $grey;
+  background-color: $grey;
+  // background-color: $black;
   min-height: 100vh;
-  width: 100%;
-  max-width: 1440px;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
+
 picture,
 img {
   max-width: 100%;
@@ -88,4 +89,7 @@ button {
     transition-duration: 0.1ms !important;
     scroll-behavior: auto !important;
   }
+}
+.homepage, .destination-pg, .crew-pg, .technology-pg{
+  border: 0.5px solid white;
 }

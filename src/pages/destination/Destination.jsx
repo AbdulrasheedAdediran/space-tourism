@@ -50,7 +50,7 @@ const Destination = () => {
 
   return (
     <section
-      className="destination-pg"
+      className="destination-pg" 
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}

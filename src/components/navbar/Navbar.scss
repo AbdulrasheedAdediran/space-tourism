@@ -4,17 +4,19 @@
 .navbar {
   @include flex();
   height: 15vh;
-  position: relative;
-  // border: 2px solid red;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 0.5px solid red;
+  transition: all 0.35s ease-out;
 
   img {
     aspect-ratio: 1;
     width: 100%;
   }
-  .logo,
-  .menu-btn {
-    position: fixed;
-  }
+
   .logo {
     width: clamp(2.5rem, 15vw, 3rem);
     aspect-ratio: 1/1;
@@ -59,6 +61,7 @@
   .nav__links {
     @include flex(flex-start, flex-start, column);
     background-color: $tinted-black-dark;
+    z-index: 20;
     // border: 2px solid red;
   }
 
@@ -69,7 +72,6 @@
       -webkit-backdrop-filter: blur(2.5rem);
     }
   }
-
 
   .link {
     @include white-barlow-condensed-text();
@@ -91,9 +93,7 @@
 //==============================//
 //==============================//
 
-/*== SMALL SCREEN MOBILE DEVICES ==*/
-@media (max-width: 300px) {
-}
+
 /*== MOBILE DEVICES ==*/
 @media (max-width: 480px) {
   .navbar {
@@ -103,7 +103,6 @@
 
   .nav__links {
     position: fixed;
-    z-index: 20;
     height: 100vh;
     inset: 0 0 0 30%;
     padding-top: clamp(5rem, 15vh, 7.5rem);
@@ -136,9 +135,7 @@
     .menu-btn {
       display: none;
     }
-    .logo {
-      position: fixed;
-    }
+
     .nav__links {
       @include flex(center, flex-start);
       padding-top: 1rem;
@@ -156,15 +153,16 @@
 @media (min-width: 481px) and (max-width: 768px) {
   .navbar {
     height: 12.5vh;
+
     .logo {
-      top: 1rem;
-      left: 1.5rem;
+      position: absolute;
+      top: 0.8rem;
+      // border: 1px solid white;
     }
 
     .nav__links {
-      // border: 1px solid red;
       padding-inline: clamp(0.75rem, 3.5vw, 1rem);
-      position: fixed;
+      position: absolute;
       top: 0;
       right: 0;
     }
@@ -183,6 +181,7 @@
 @media (min-width: 769px) {
   .navbar {
     .logo {
+      position: fixed;
       top: 2rem;
       left: 2rem;
       margin-right: 2rem;
