@@ -53,7 +53,7 @@ body {
   font-family: $barlow;
   color: $grey;
   background-color: $grey;
-  // background-color: $black;
+  background-color: $black;
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
@@ -89,7 +89,4 @@ button {
     transition-duration: 0.1ms !important;
     scroll-behavior: auto !important;
   }
-}
-.homepage, .destination-pg, .crew-pg, .technology-pg{
-  border: 0.5px solid white;
 }

@@ -7,8 +7,8 @@
   height: 100%;
   padding-bottom: 10vh;
   position: relative;
-  top: 15vh;
-  // overflow: hidden;
+  // top: 15vh;
+  overflow-y: hidden;
 
   .home-content {
     text-align: center;
@@ -92,7 +92,7 @@
 @media (max-width: 480px) {
   .homepage {
     min-height: 87.5vh;
-    top: 12.5vh;
+    // top: 12.5vh;
     padding-bottom: 7.5vh;
     padding-inline: 1.5rem;
   }
@@ -102,7 +102,7 @@
 @media (min-width: 481px) and (max-width: 768px) {
   .homepage {
     min-height: 87.5vh;
-    top: 12.5vh;
+    // top: 12.5vh;
 
     .home-content {
       max-width: 60vw;

@@ -3,11 +3,11 @@
 
 .crew-pg {
   // border: 1px solid blue;
-  height: 85vh;
+  min-height: 85vh;
   display: block;
   padding-inline: 1rem;
   text-align: center;
-  // overflow: hidden;
+  overflow-y: hidden;
 
   h1,
   h2,
@@ -69,7 +69,12 @@
     }
   }
 }
-
+/*== MOBILE ONLY ==*/
+@media (max-width: 480px) {
+  .crew-pg {
+    min-height: 87.5vh;
+  }
+}
 /*== TABLETS & DESKTOP DEVICES ==*/
 @media (min-width: 481px) {
   .crew-pg {
@@ -91,9 +96,11 @@
   }
 }
 
+
 /*== TABLETS ONLY ==*/
 @media (min-width: 481px) and (max-width: 768px) {
   .crew-pg {
+    min-height: 87.5vh;
     padding-inline: 1.5rem;
   }
 

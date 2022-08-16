@@ -2,11 +2,11 @@
 @use "scss/abstracts/mixins" as *;
 
 .technology-pg {
-  height: 87.5vh;
+  height: 85vh;
   display: block;
   // border: 1px solid red;
   text-align: center;
-  // overflow: hidden;
+  overflow-y: hidden;
 
   h1,
   picture,
@@ -68,6 +68,9 @@
 /*== REGULAR MOBILE DEVICES ==*/
 @media (max-width: 480px) {
   .technology-pg {
+    height: 87.5vh;
+
+
     h1,
     picture,
     h2,
@@ -99,6 +102,8 @@
 /*== TABLETS ONLY ==*/
 @media (min-width: 481px) and (max-width: 768px) {
   .technology-pg {
+    height: 87.5vh;
+
     h1,
     picture,
     h2,

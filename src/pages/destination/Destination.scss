@@ -3,10 +3,11 @@
 
 .destination-pg {
   display: block;
+  min-height: 85vh;
   text-align: center;
   padding-inline: 1rem;
   position: relative;
-  top: 12.5vh;
+  // top: 12.5vh;
 
   h1,
   h2,
@@ -68,12 +69,11 @@
   }
 }
 
-/*== SMALL SCREEN MOBILE DEVICES ==*/
-@media (max-width: 300px) {
-}
+
 /*== REGULAR MOBILE DEVICES ==*/
 @media (max-width: 480px) {
   .destination-pg {
+    min-height: 87.5vh;
     padding-bottom: 7.5vh;
   }
 }
@@ -99,6 +99,7 @@
 /*== TABLETS ONLY ==*/
 @media (min-width: 481px) and (max-width: 768px) {
   .destination-pg {
+    min-height: 87.5vh;
     padding-inline: 1.5rem;
 
     picture {

@@ -16,9 +16,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   min-height: 100vh;
-  // height: 100%;
 }
 
 @mixin link-active($margin-top: 0.9rem) {
