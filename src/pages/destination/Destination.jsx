@@ -16,7 +16,6 @@ const Destination = () => {
   const activeDestination = destinations[activeIndex];
   const {
     name,
-    // images: { webp, png },
     description,
     distance,
     travel,

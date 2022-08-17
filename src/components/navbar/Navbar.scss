@@ -9,7 +9,6 @@
   top: 0;
   left: 0;
   right: 0;
-  // border: 0.5px solid red;
   transition: all 0.35s ease-out;
 
   img {
@@ -22,11 +21,9 @@
     aspect-ratio: 1/1;
     top: 1.5rem;
     left: 1.5rem;
-    // border: 2px solid red;
   }
 
 .overlay{
-  // border: 2px solid red;
   height: 100vh;
   position: fixed;
   inset: 0;
@@ -49,7 +46,6 @@
     z-index: 50;
     top: 1.9rem;
     right: 1.5rem;
-    // border: 2px solid red;
     .hide {
       display: none;
     }
@@ -62,7 +58,6 @@
     @include flex(flex-start, flex-start, column);
     background-color: $tinted-black-dark;
     z-index: 20;
-    // border: 2px solid red;
   }
 
   @supports (backdrop-filter: blur(2.5rem)) or (-webkit-backdrop-filter: blur(2.5rem)) {
@@ -86,7 +81,6 @@
       margin-right: 0.5rem;
       font-weight: 700;
       width: 1.5rem;
-      // border: 1px solid red;
     }
   }
 }
@@ -108,7 +102,6 @@
     padding-top: clamp(5rem, 15vh, 7.5rem);
     transform: translateX(120%);
     transition: transform 0.35s ease-out;
-    // border: 2px solid red;
 
     &.show {
       transform: translateX(0%);
@@ -157,7 +150,6 @@
     .logo {
       position: absolute;
       top: 0.8rem;
-      // border: 1px solid white;
     }
 
     .nav__links {
@@ -172,7 +164,6 @@
     }
     span:nth-of-type(1) {
       display: none;
-      // border: 2px solid red;
     }
   }
 }
@@ -187,7 +178,6 @@
       margin-right: 2rem;
     }
     .nav__links {
-      // border: 1px solid red;
       padding-inline: 5vw 8vw;
       position: fixed;
       top: 1rem;
@@ -209,7 +199,6 @@
     }
     .link {
       margin-inline: 2vw;
-      // border: 2px solid red;
     }
   }
 }

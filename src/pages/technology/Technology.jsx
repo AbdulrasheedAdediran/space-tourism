@@ -15,7 +15,6 @@ const Technology = () => {
   const activeTech = technology[activeIndex];
   const {
     name,
-    // images: { landscape, portrait },
     description,
   } = activeTech;
   const landscapeImages = [

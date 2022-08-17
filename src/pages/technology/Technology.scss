@@ -4,7 +4,6 @@
 .technology-pg {
   height: 85vh;
   display: block;
-  // border: 1px solid red;
   text-align: center;
   overflow-y: hidden;
 
@@ -115,7 +114,6 @@
       width: clamp(3.5rem, 10vw, 4rem);
     }
     .technology-content {
-      // width: 30vw;
       h2 {
         font-size: clamp(2rem, 10vw, 2.5rem);
       }
@@ -140,13 +138,10 @@
     }
     article {
       @include flex(center, space-between, row-reverse);
-      // border: 2px solid yellow;
-      // position: relative;
 
       .technology-wrapper {
         @include flex(center, space-between, row);
         column-gap: 4vw;
-        // border: 2px solid red;
 
         .btn {
           font-size: 2rem;

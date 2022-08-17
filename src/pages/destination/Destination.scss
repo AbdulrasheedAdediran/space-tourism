@@ -7,7 +7,6 @@
   text-align: center;
   padding-inline: 1rem;
   position: relative;
-  // top: 12.5vh;
 
   h1,
   h2,
@@ -144,13 +143,11 @@
     article {
       @include flex(center, space-between);
       padding-left: 10vw;
-      // border: 2px solid red;
       width: 100%;
       margin-inline: auto;
     }
     picture {
       width: clamp(20rem, 30vw, 22.5rem);
-      // display: inline-flex;
       align-self: center;
     }
     .destination-content {
@@ -175,7 +172,6 @@
         font-size: 1.125rem;
       }
       .dist-and-time {
-        // border: 2px solid yellowgreen;
         @include flex(center, flex-start);
         width: 100%;
         row-gap: 5rem;

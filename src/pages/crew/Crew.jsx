@@ -16,7 +16,6 @@ const Crew = () => {
   const activeCrewMember = crew[activeIndex];
   const {
     name,
-    // images: { webp, png },
     role,
     bio,
   } = activeCrewMember;
