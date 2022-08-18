@@ -27,10 +27,12 @@
     display: inline-grid;
     place-items: center;
   }
+  
   nav {
     @include flex(center, space-around);
     margin-bottom: 0.75rem;
   }
+
   .btn {
     @include grey-barlow-condensed-text();
     font-size: 0.875rem;
@@ -46,11 +48,13 @@
     h2 {
       font-size: clamp(3rem, 15vw, 3.5rem);
     }
+
     .description {
       padding-bottom: 5vh;
       margin-bottom: 5vh;
       border-bottom: 1px solid hsl(231, 77%, 90%, 0.25);
     }
+
     .dist-and-time {
       @include flex(center, space-between, column);
       gap: 1.5rem;
@@ -115,6 +119,7 @@
         font-size: 1rem;
       }
     }
+
     .text-content {
       h2 {
         font-size: clamp(4.5rem, 15vw, 5.5rem);
@@ -146,10 +151,12 @@
       width: 100%;
       margin-inline: auto;
     }
+
     picture {
       width: clamp(20rem, 30vw, 22.5rem);
       align-self: center;
     }
+
     .destination-content {
       max-width: 30vw;
       nav {
@@ -160,6 +167,7 @@
         }
       }
     }
+
     .text-content {
       text-align: left;
 
@@ -171,6 +179,7 @@
         margin-bottom: 2.5vh;
         font-size: 1.125rem;
       }
+
       .dist-and-time {
         @include flex(center, flex-start);
         width: 100%;

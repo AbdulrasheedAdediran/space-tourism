@@ -23,7 +23,7 @@ const Crew = () => {
   const webpImages = [webpDouglas, webpMark, webpVictor, webpAnousheh];
   const activePngImage = pngImages[activeIndex];
   const activeWebpImage = webpImages[activeIndex];
- const [touchStart, setTouchStart] = useState(null)
+  const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
   const minSwipeDistance = 50;
 

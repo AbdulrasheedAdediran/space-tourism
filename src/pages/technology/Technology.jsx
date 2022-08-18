@@ -38,18 +38,18 @@ const Technology = () => {
     setTouchEnd(null)
     setTouchStart(e.targetTouches[0].clientX);
   }
-
-  const handleTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX)
-  };
+  
+  const handleTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+  const nextSlide = () => setActiveIndex((activeIndex + 1) % technology.length)
+  const previousSlide = () => setActiveIndex((activeIndex - 1 + technology.length) % technology.length)
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
       const distance = touchStart - touchEnd;
       const isLeftSwipe = distance > minSwipeDistance
       const isRightSwipe = distance < -minSwipeDistance
-      isLeftSwipe && setActiveIndex((activeIndex + 1) % technology.length)
-      isRightSwipe && setActiveIndex((activeIndex - 1 + technology.length) % technology.length)
+      isLeftSwipe && nextSlide
+      isRightSwipe && previousSlide
   }
   
   return (
