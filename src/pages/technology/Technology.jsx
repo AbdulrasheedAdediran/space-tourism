@@ -10,14 +10,7 @@ import spaceCapsulePortrait from "../../../assets/technology/image-space-capsule
 import "./Technology.scss";
 
 const Technology = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const technology = data.technology;
-  const activeTech = technology[activeIndex];
-  const {
-    name,
-    description,
-  } = activeTech;
-  const landscapeImages = [
+    const landscapeImages = [
     launchVehicleLandscape,
     spaceSportLandscape,
     spaceCapsuleLandscape,
@@ -27,18 +20,25 @@ const Technology = () => {
     spaceSportPortrait,
     spaceCapsulePortrait,
   ];
-  const activeLandscapeImage = landscapeImages[activeIndex];
-  const activePortraitImage = portraitImages[activeIndex];
+  const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
+  const activeLandscapeImage = landscapeImages[activeIndex];
+  const activePortraitImage = portraitImages[activeIndex];
+  const technology = data.technology;
   const minSwipeDistance = 50;
+  const activeTech = technology[activeIndex];
+  const {
+    name,
+    description,
+  } = activeTech;
 
   
   const handleTouchStart = (e) => {
     setTouchEnd(null)
     setTouchStart(e.targetTouches[0].clientX);
   }
-  
+
   const handleTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
   const nextSlide = () => setActiveIndex((activeIndex + 1) % technology.length)
   const previousSlide = () => setActiveIndex((activeIndex - 1 + technology.length) % technology.length)
@@ -48,8 +48,8 @@ const Technology = () => {
       const distance = touchStart - touchEnd;
       const isLeftSwipe = distance > minSwipeDistance
       const isRightSwipe = distance < -minSwipeDistance
-      isLeftSwipe && nextSlide
-      isRightSwipe && previousSlide
+      isLeftSwipe && nextSlide()
+      isRightSwipe && previousSlide()
   }
   
   return (
@@ -102,11 +102,17 @@ const Technology = () => {
               3
             </button>
           </nav>
-          <div className="technology-content">
+            <motion.div
+            className="technology-content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            >
             <h3>The terminology...</h3>
             <h2>{name}</h2>
             <p>{description}</p>
-          </div>
+            </motion.div>
         </div>
       </article>
     </section>
