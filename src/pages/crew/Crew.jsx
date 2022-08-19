@@ -12,6 +12,8 @@ import webpAnousheh from "../../../assets/crew/image-anousheh-ansari.webp";
 import "./Crew.scss";
 const Crew = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
   const crew = data.crew;
   const activeCrewMember = crew[activeIndex];
   const {
@@ -23,8 +25,7 @@ const Crew = () => {
   const webpImages = [webpDouglas, webpMark, webpVictor, webpAnousheh];
   const activePngImage = pngImages[activeIndex];
   const activeWebpImage = webpImages[activeIndex];
-  const [touchStart, setTouchStart] = useState(null)
-  const [touchEnd, setTouchEnd] = useState(null)
+
   const minSwipeDistance = 50;
 
   
@@ -33,17 +34,17 @@ const Crew = () => {
     setTouchStart(e.targetTouches[0].clientX);
   }
 
-  const handleTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX)
-  };
+  const handleTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+  const nextSlide = () => setActiveIndex((activeIndex + 1) % crew.length)
+  const previousSlide = () => setActiveIndex((activeIndex - 1 + crew.length) % crew.length)
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
       const distance = touchStart - touchEnd;
       const isLeftSwipe = distance > minSwipeDistance
       const isRightSwipe = distance < -minSwipeDistance
-      isLeftSwipe && setActiveIndex((activeIndex + 1) % crew.length)
-      isRightSwipe && setActiveIndex((activeIndex - 1 + crew.length) % crew.length)
+      isLeftSwipe && nextSlide()
+      isRightSwipe && previousSlide()
 }
 
   return (
