@@ -46,9 +46,11 @@
     z-index: 50;
     top: 1.9rem;
     right: 1.5rem;
+
     .hide {
       display: none;
     }
+
     .show {
       display: block;
     }
@@ -162,6 +164,7 @@
     .link {
       margin-inline: clamp(0.75rem, 3.5vw, 1rem);
     }
+
     span:nth-of-type(1) {
       display: none;
     }
@@ -177,6 +180,7 @@
       left: 2rem;
       margin-right: 2rem;
     }
+
     .nav__links {
       padding-inline: 5vw 8vw;
       position: fixed;
@@ -197,6 +201,7 @@
         width: 65%;
       }
     }
+    
     .link {
       margin-inline: 2vw;
     }

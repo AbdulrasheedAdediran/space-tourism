@@ -11,26 +11,29 @@
 
   .home-content {
     text-align: center;
+
     h1 {
       letter-spacing: $md-xter-space;
     }
+
     h1,
     h2 {
       text-align: center;
       font-weight: 400;
-      padding-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
     }
 
     h2 {
       font-size: 5.5rem;
     }
+
     p {
       line-height: 1.6rem;
     }
   }
 
   .explore-btn {
-    display: inline-grid;
+    display: grid;
     place-items: center;
     @include black-bellefair-text();
     font-size: clamp(1rem, 5vw, 2rem);
@@ -69,6 +72,7 @@
       font-size: 0.85rem;
       letter-spacing: $sm-xter-space;
     }
+
     h1,
     h2 {
       padding-bottom: 0.75rem;
@@ -77,6 +81,7 @@
     h2 {
       font-size: clamp(3rem, 10vw, $lg-heading);
     }
+
     p {
       line-height: 1.75rem;
       font-size: 0.85rem;
@@ -99,10 +104,12 @@
 
     .home-content {
       max-width: 60vw;
+
       h1 {
         font-size: 1.25rem;
         letter-spacing: $lg-xter-space;
       }
+
       h1,
       h2 {
         padding-bottom: 1rem;
@@ -111,6 +118,7 @@
       h2 {
         font-size: clamp(5rem, 20vw, $xxl-heading);
       }
+
       p {
         line-height: 1.75rem;
       }
@@ -133,6 +141,7 @@
         font-size: clamp(1rem, 10vw, 1.75rem);
         letter-spacing: $xl-xter-space;
       }
+
       h1,
       h2 {
         text-align: left;
@@ -142,6 +151,7 @@
       h2 {
         font-size: clamp(5rem, 10vw, $xxl-heading);
       }
+      
       p {
         font-size: 1.125rem;
         line-height: 1.6rem;

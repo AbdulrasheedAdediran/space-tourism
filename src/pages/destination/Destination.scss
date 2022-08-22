@@ -27,7 +27,7 @@
     display: inline-grid;
     place-items: center;
   }
-  
+
   nav {
     @include flex(center, space-around);
     margin-bottom: 0.75rem;
@@ -188,6 +188,7 @@
         div:nth-of-type(1) {
           margin-right: 2.5vw;
         }
+        
         p {
           font-size: $sm-heading;
         }

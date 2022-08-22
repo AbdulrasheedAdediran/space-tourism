@@ -14,6 +14,7 @@
     text-transform: uppercase;
     font-weight: 400;
   }
+
   h1 {
     @include page-heading-1();
     font-size: 1rem;
@@ -47,6 +48,7 @@
 
     .technology-content {
       padding-inline: 1rem;
+
       h3 {
         font-size: 0.95rem;
         font-weight: 400;
@@ -86,6 +88,7 @@
       text-align: left;
       font-size: clamp(1rem, 10vw, 1.25rem);
     }
+
     .btn {
       width: clamp(3rem, 10vw, 3.75rem);
     }
@@ -113,10 +116,12 @@
     .btn {
       width: clamp(3.5rem, 10vw, 4rem);
     }
+
     .technology-content {
       h2 {
         font-size: clamp(2rem, 10vw, 2.5rem);
       }
+
       p {
         font-size: 1rem;
         width: 75%;
@@ -136,6 +141,7 @@
     h1 {
       font-size: clamp(1rem, 10vw, 1.75rem);
     }
+
     article {
       @include flex(center, space-between, row-reverse);
 
@@ -157,14 +163,18 @@
           @include flex(center, space-between, column);
           row-gap: 3.5vh;
         }
+
         .technology-content {
           text-align: left;
+
           h3 {
             font-size: 1rem;
           }
+
           h2 {
             font-size: clamp(3rem, 15vw, 3.5rem);
           }
+          
           p {
             font-size: 1.125rem;
             max-width: 30vw;
