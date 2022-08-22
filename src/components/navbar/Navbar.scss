@@ -103,7 +103,7 @@
     inset: 0 0 0 30%;
     padding-top: clamp(5rem, 15vh, 7.5rem);
     transform: translateX(120%);
-    transition: transform 0.35s ease-out;
+    transition: transform 0.5s cubic-bezier(.21,.73,.47,1.22);
 
     &.show {
       transform: translateX(0%);
@@ -201,7 +201,7 @@
         width: 65%;
       }
     }
-    
+
     .link {
       margin-inline: 2vw;
     }
