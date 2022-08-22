@@ -1,14 +1,14 @@
 import { useState  } from "react";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import data from "../../../data.json";
 import webpMoon from "../../../assets/destination/image-moon.webp";
-import pngMoon from "../../../assets/destination/image-moon.webp";
+import pngMoon from "../../../assets/destination/image-moon.png";
 import webpMars from "../../../assets/destination/image-mars.webp";
-import pngMars from "../../../assets/destination/image-mars.webp";
+import pngMars from "../../../assets/destination/image-mars.png";
 import webpEuropa from "../../../assets/destination/image-europa.webp";
-import pngEuropa from "../../../assets/destination/image-europa.webp";
+import pngEuropa from "../../../assets/destination/image-europa.png";
 import webpTitan from "../../../assets/destination/image-titan.webp";
-import pngTitan from "../../../assets/destination/image-titan.webp";
+import pngTitan from "../../../assets/destination/image-titan.png";
 import "./Destination.scss";
 const Destination = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -59,10 +59,16 @@ const Destination = () => {
       </h1>
 
       <article>
-        <picture>
+        <motion.picture
+          key={name}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <source type="image/webp" srcSet={activeWebpImage} />
           <img src={activePngImage} alt={name} />
-        </picture>
+        </motion.picture>
 
         <div className="destination-content">
           <nav>
@@ -91,7 +97,13 @@ const Destination = () => {
               Titan
             </button>
           </nav>
-          <div className="text-content">
+          <motion.div className="text-content"
+            key={name}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <h2>{name}</h2>
 
             <p className="description">{description}</p>
@@ -107,7 +119,7 @@ const Destination = () => {
                 <p>{travel}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </article>
     </section>

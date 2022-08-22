@@ -49,7 +49,7 @@ const Crew = () => {
 
   return (
     <section
-      className="crew-pg"
+        className="crew-pg"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -58,10 +58,16 @@ const Crew = () => {
         <span>02</span> <span>Meet your crew</span>
       </h1>
       <div className="crew-wrapper">
-        <picture>
+        <motion.picture
+          key={name}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <source type="image/webp" srcSet={activeWebpImage} />
           <img src={activePngImage} alt={`${name}, a crew member`} />
-        </picture>
+        </motion.picture>
 
         <article>
           <nav>
@@ -83,11 +89,18 @@ const Crew = () => {
             ></button>
           </nav>
 
-          <div className="crew-member">
+          <motion.div 
+            className="crew-member"
+            key={name}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <h4>{role}</h4>
             <h2>{name}</h2>
             <p>{bio}</p>
-          </div>
+          </motion.div>
         </article>
       </div>
     </section>

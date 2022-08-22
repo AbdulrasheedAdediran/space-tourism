@@ -55,7 +55,7 @@ const Technology = () => {
   return (
     <section
       className="technology-pg"
-       onTouchStart={handleTouchStart}
+        onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
     >
@@ -64,7 +64,13 @@ const Technology = () => {
       </h1>
 
       <article>
-        <picture>
+        <motion.picture
+            key={name}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
           <source
             media="(max-width:768px)"
             type="image/jpeg"
@@ -79,7 +85,7 @@ const Technology = () => {
           />
 
           <img src={activePortraitImage} className="portrait" alt={name} />
-        </picture>
+        </motion.picture>
 
         <div className="technology-wrapper">
           <nav>
@@ -102,17 +108,18 @@ const Technology = () => {
               3
             </button>
           </nav>
-            <motion.div
-            className="technology-content"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            >
-            <h3>The terminology...</h3>
-            <h2>{name}</h2>
-            <p>{description}</p>
-            </motion.div>
+              <motion.div
+              className="technology-content"
+              key={name}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              >
+              <h3>The terminology...</h3>
+              <h2>{name}</h2>
+              <p>{description}</p>
+              </motion.div>
         </div>
       </article>
     </section>
