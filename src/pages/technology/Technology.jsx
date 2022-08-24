@@ -64,13 +64,7 @@ const Technology = () => {
       </h1>
 
       <article>
-        <motion.picture
-            key={name}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-        >
+        <picture>
           <source
             media="(max-width:768px)"
             type="image/jpeg"
@@ -85,7 +79,7 @@ const Technology = () => {
           />
 
           <img src={activePortraitImage} className="portrait" alt={name} />
-        </motion.picture>
+          </picture>
 
         <div className="technology-wrapper">
           <nav>
