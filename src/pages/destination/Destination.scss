@@ -106,7 +106,8 @@
     padding-inline: 1.5rem;
 
     picture {
-      width: clamp(15rem, 50vw, 18rem);
+      width: clamp(15rem, 40vw, 18rem);
+      margin-block: 3.5vh;
     }
 
     nav {
