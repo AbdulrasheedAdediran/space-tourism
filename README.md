@@ -20,6 +20,7 @@ Users should be able to:
 
 ### Screenshot
 
+<img src="./assets/SpaceTourismScreenshot.jpg" width="768" height="480">
 
 
 ### Links
@@ -29,10 +30,9 @@ Users should be able to:
 
 ### Built with
 - Mobile-first approach
-- Framer motion
 - Flexbox
 - CSS Grid
-## - Programming language
+#### - Programming languages
 - [React](https://reactjs.org/) - JS library
 - [Framer Motion](https://www.framer.com/motion) - React library
 - [SCSS](https://sass-lang.com/) - CSS Preprocessor
