@@ -25,7 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution: [at Frontend Mentor](https://www.frontendmentor.io/solutions/fully-responsive-multipage-website-built-with-react-and-sass-Y0WrOKB84L#comment-630bd9703fba76c6d9a1d94b)
+- Solution: [at Frontend Mentor](https://www.frontendmentor.io/solutions/fully-responsive-multipage-website-built-with-react-and-sass-Y0WrOKB84L)
+
 - Live Site: [hosted on Vercel](https://galaxytours.vercel.app)
 
 ### Built with
